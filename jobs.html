@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sovereign Talent | Job Matches</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#C9A84C",
+              "on-background": "#1A1A1A",
+              "tertiary-container": "#C9A84C",
+              "outline-variant": "#d0c5b2",
+              "primary-fixed-dim": "#C9A84C",
+              "on-secondary-fixed": "#1A1A1A",
+              "on-error-container": "#93000a",
+              "surface": "#ffffff",
+              "on-secondary-fixed-variant": "#404040",
+              "tertiary": "#755b00",
+              "surface-container-highest": "#e5e2e1",
+              "on-tertiary-container": "#533c00",
+              "on-surface-variant": "#1A1A1A",
+              "on-primary": "#ffffff",
+              "primary": "#C9A84C",
+              "surface-container-high": "#f5f5f5",
+              "tertiary-fixed-dim": "#ecc165",
+              "tertiary-fixed": "#ffdfa0",
+              "surface-bright": "#ffffff",
+              "inverse-surface": "#1A1A1A",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#1A1A1A",
+              "primary-container": "#C9A84C",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "surface-container": "#f0eded",
+              "secondary-container": "#C9A84C",
+              "inverse-on-surface": "#f3f0ef",
+              "on-primary-container": "#1A1A1A",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "on-tertiary-fixed": "#261a00",
+              "on-error": "#ffffff",
+              "surface-container-low": "#fafafa",
+              "on-primary-fixed-variant": "#1A1A1A",
+              "surface-dim": "#dcd9d9",
+              "secondary-fixed-dim": "#C9A84C",
+              "primary-fixed": "#C9A84C",
+              "surface-variant": "#e5e2e1",
+              "background": "#ffffff",
+              "secondary-fixed": "#C9A84C",
+              "secondary": "#1A1A1A",
+              "inverse-primary": "#C9A84C",
+              "on-surface": "#1A1A1A",
+              "outline": "#7e7665",
+              "on-secondary-container": "#1A1A1A",
+              "on-secondary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .gold-shimmer {
+            background: linear-gradient(90deg, #755b00 0%, #c9a84c 100%);
+        }
+        .gold-shimmer:hover {
+            filter: brightness(1.1);
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f5f5f5; }
+        ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 999px; }
+        
+        .logo-container {
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container/30 selection:text-on-primary-container">
+<!-- TopNavBar Shared Component -->
+<header class="fixed top-0 w-full z-50 bg-neutral-900/85 dark:bg-neutral-950/85 backdrop-blur-md shadow-[0_4px_40px_rgba(117,91,0,0.06)] h-20 px-8 flex justify-between items-center transition-colors duration-300">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 overflow-hidden flex items-center justify-center">
+<img alt="Maznex Logo" class="max-w-full max-h-full object-contain filter brightness-0 invert" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+</div>
+<span class="text-2xl font-bold tracking-tighter text-white uppercase font-headline">Maznex</span>
+</div>
+<div class="flex items-center gap-8">
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<div class="flex items-center gap-6 border-l pl-6 border-white/20">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white/80 hover:text-[#C9A84C] transition-all active:scale-95 duration-150">notifications</button>
+<div class="text-xs font-bold text-[#C9A84C] cursor-pointer">USD/EUR</div>
+</div>
+<button class="bg-[#C9A84C] text-[#1A1A1A] px-5 py-2 rounded font-bold text-sm active:scale-95 duration-150">Client Login</button>
+</div>
+</div>
+</header>
+<div class="flex pt-20">
+<!-- SideNavBar Shared Component -->
+<aside class="h-screen w-64 fixed left-0 top-0 border-r-0 bg-white dark:bg-neutral-900 flex flex-col pt-24 py-6 shadow-2xl z-40">
+<div class="px-6 mb-8 flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-neutral-100 flex items-center justify-center border border-[#C9A84C]/20 overflow-hidden">
+<img alt="User Profile" class="w-full h-full object-cover" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+<div>
+<p class="text-lg font-black text-[#1A1A1A] dark:text-white leading-none">MX Gateway</p>
+<p class="text-[10px] text-[#755B00] uppercase tracking-widest font-bold">Sovereign Access</p>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<a class="flex items-center gap-4 px-6 py-3 bg-[#C9A84C] text-white rounded-md mx-2 font-manrope text-sm font-medium hover:translate-x-1 transition-transform" href="/contact">
+<span class="material-symbols-outlined text-xl">person_search</span> Candidate Portal
+            </a>
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 mx-2 font-manrope text-sm font-medium hover:translate-x-1 transition-transform" href="/contact">
+<span class="material-symbols-outlined text-xl">business_center</span> Employer Hub
+            </a>
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 mx-2 font-manrope text-sm font-medium hover:translate-x-1 transition-transform" href="/contact">
+<span class="material-symbols-outlined text-xl">trending_up</span> Market Insights
+            </a>
+<a class="flex items-center gap-4 px-6 py-3 text-neutral-600 dark:text-neutral-400 hover:bg-neutral-50 dark:hover:bg-neutral-800 mx-2 font-manrope text-sm font-medium hover:translate-x-1 transition-transform" href="/contact">
+<span class="material-symbols-outlined text-xl">gavel</span> Compliance
+            </a>
+</nav>
+<div class="px-4 mt-auto">
+<button class="w-full bg-[#1A1A1A] text-[#C9A84C] py-3 rounded font-manrope font-bold text-xs uppercase tracking-widest border border-[#C9A84C]/30 hover:bg-neutral-800 transition-all active:opacity-80">
+                Book Consultation
+            </button>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-64 flex-1 min-h-screen px-12 py-12 bg-surface-container-low">
+<!-- Search & Header Section -->
+<section class="max-w-6xl mx-auto mb-16">
+<div class="mb-8">
+<h1 class="font-headline font-extrabold text-4xl tracking-tight text-[#1A1A1A] mb-2 uppercase">Executive Job Matches</h1>
+<p class="text-[#404040] font-medium border-l-2 border-[#C9A84C] pl-4">Curated high-level finance opportunities matching your sovereign profile.</p>
+</div>
+<div class="bg-white p-2 rounded shadow-xl flex items-center gap-4 border border-neutral-100">
+<div class="flex-1 flex items-center px-4 gap-3">
+<span class="material-symbols-outlined text-neutral-400">search</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-[#1A1A1A] placeholder:text-neutral-400 font-medium" placeholder="Search by role, company, or strategic keyword..." type="text"/>
+</div>
+<div class="h-10 w-px bg-neutral-100"></div>
+<button class="flex items-center gap-2 px-6 py-3 text-[#1A1A1A] font-bold hover:bg-neutral-50 transition-colors rounded">
+<span class="material-symbols-outlined">tune</span>
+                    Advanced Filters
+                </button>
+<button class="bg-[#1A1A1A] text-[#C9A84C] px-8 py-3 rounded font-bold shadow-lg">Search Roles</button>
+</div>
+</section>
+<!-- Filters Grid -->
+<section class="max-w-6xl mx-auto mb-12 grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#C9A84C]">Location</label>
+<div class="relative">
+<select class="w-full bg-white border border-neutral-200 rounded py-3 pl-4 pr-10 text-xs font-bold appearance-none focus:ring-1 focus:ring-[#C9A84C] focus:border-[#C9A84C]">
+<option>Global (All Regions)</option>
+<option>London, UK</option>
+<option>New York, USA</option>
+<option>Dubai, UAE</option>
+<option>Singapore</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#C9A84C] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#C9A84C]">Salary (AED/GBP)</label>
+<div class="flex items-center gap-4 pt-2">
+<input class="flex-1 accent-[#C9A84C] h-1.5 bg-neutral-200 rounded-full appearance-none" type="range"/>
+<span class="text-[10px] font-black text-[#1A1A1A]">450k+</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#C9A84C]">Qualification</label>
+<div class="flex flex-wrap gap-2">
+<span class="px-3 py-1 bg-[#C9A84C] text-[#1A1A1A] text-[10px] font-bold rounded">ACCA</span>
+<span class="px-3 py-1 bg-neutral-100 text-[#1A1A1A] text-[10px] font-bold rounded hover:bg-[#C9A84C]/10 transition-colors cursor-pointer border border-neutral-200">FCCA</span>
+<span class="px-3 py-1 bg-neutral-100 text-[#1A1A1A] text-[10px] font-bold rounded hover:bg-[#C9A84C]/10 transition-colors cursor-pointer border border-neutral-200">CPA</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="block text-[10px] font-bold uppercase tracking-[0.2em] text-[#C9A84C]">Role Level</label>
+<div class="relative">
+<select class="w-full bg-white border border-neutral-200 rounded py-3 pl-4 pr-10 text-xs font-bold appearance-none focus:ring-1 focus:ring-[#C9A84C] focus:border-[#C9A84C]">
+<option>Executive / C-Suite</option>
+<option>Director</option>
+<option>VP Finance</option>
+<option>Senior Management</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-[#C9A84C] pointer-events-none">expand_more</span>
+</div>
+</div>
+</section>
+<!-- Job List Area -->
+<section class="max-w-6xl mx-auto space-y-8">
+<!-- Job Card 1 -->
+<div class="group relative bg-white rounded p-8 shadow-sm hover:shadow-2xl hover:translate-y-[-2px] transition-all duration-300 flex flex-col md:flex-row gap-8 items-start border-l-4 border-transparent hover:border-[#C9A84C]">
+<div class="w-20 h-20 rounded bg-neutral-50 flex items-center justify-center shrink-0 border border-neutral-100">
+<span class="material-symbols-outlined text-3xl text-[#1A1A1A]" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline font-bold text-2xl text-[#1A1A1A] group-hover:text-[#C9A84C] transition-colors">Group Chief Financial Officer</h3>
+<p class="text-[#404040] font-semibold flex items-center gap-2">
+                                Mazenex Strategic Holdings 
+                                <span class="inline-flex items-center gap-1 text-[9px] bg-[#C9A84C]/20 text-[#1A1A1A] px-2 py-0.5 rounded uppercase tracking-widest font-black">
+<span class="material-symbols-outlined text-[11px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+                                    Verified
+                                </span>
+</p>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-xl text-[#1A1A1A]">AED 850,000 +</p>
+<p class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">~ £185,000 GBP</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-6 mt-6">
+<div class="flex items-center gap-2 text-[#1A1A1A]">
+<span class="material-symbols-outlined text-[#C9A84C] text-lg">location_on</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Dubai, UAE (On-site)</span>
+</div>
+<div class="flex items-center gap-2 text-[#1A1A1A]">
+<span class="material-symbols-outlined text-[#C9A84C] text-lg">school</span>
+<span class="text-xs font-bold uppercase tracking-tighter">FCCA / CPA Required</span>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="bg-[#1A1A1A] text-[#C9A84C] px-8 py-3 rounded font-bold text-sm uppercase tracking-widest hover:bg-neutral-800 transition-all">Apply Now</button>
+<button class="px-8 py-3 rounded border border-neutral-200 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest hover:bg-neutral-50 transition-all">View Full Spec</button>
+</div>
+</div>
+<div class="md:w-32 flex flex-col items-center justify-center gap-3 bg-neutral-50 rounded p-4 self-stretch shrink-0 border border-neutral-100">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-neutral-200" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-[#C9A84C]" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175" stroke-dashoffset="17.5" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-xs font-black text-[#1A1A1A]">90%</span>
+</div>
+</div>
+<span class="text-[9px] font-black text-[#C9A84C] uppercase tracking-[0.2em] text-center">Match</span>
+</div>
+</div>
+<!-- Job Card 2 -->
+<div class="group relative bg-white rounded p-8 shadow-sm hover:shadow-2xl hover:translate-y-[-2px] transition-all duration-300 flex flex-col md:flex-row gap-8 items-start border-l-4 border-transparent hover:border-[#C9A84C]">
+<div class="w-20 h-20 rounded bg-neutral-50 flex items-center justify-center shrink-0 border border-neutral-100">
+<span class="material-symbols-outlined text-3xl text-[#1A1A1A]" style="font-variation-settings: 'FILL' 1;">payments</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-2">
+<div>
+<h3 class="font-headline font-bold text-2xl text-[#1A1A1A] group-hover:text-[#C9A84C] transition-colors">VP of Finance - Private Equity</h3>
+<p class="text-[#404040] font-semibold">Global Capital Partners</p>
+</div>
+<div class="text-right">
+<p class="font-headline font-black text-xl text-[#1A1A1A]">£165,000 + Equity</p>
+<p class="text-[10px] text-neutral-400 font-bold uppercase tracking-wider">London, UK</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-6 mt-6">
+<div class="flex items-center gap-2 text-[#1A1A1A]">
+<span class="material-symbols-outlined text-[#C9A84C] text-lg">location_on</span>
+<span class="text-xs font-bold uppercase tracking-tighter">London (Hybrid)</span>
+</div>
+<div class="flex items-center gap-2 text-[#1A1A1A]">
+<span class="material-symbols-outlined text-[#C9A84C] text-lg">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-tighter">Equity Participation</span>
+</div>
+</div>
+<div class="mt-8 flex gap-4">
+<button class="bg-[#1A1A1A] text-[#C9A84C] px-8 py-3 rounded font-bold text-sm uppercase tracking-widest hover:bg-neutral-800 transition-all">Apply Now</button>
+<button class="px-8 py-3 rounded border border-neutral-200 text-[#1A1A1A] font-bold text-sm uppercase tracking-widest hover:bg-neutral-50 transition-all">View Full Spec</button>
+</div>
+</div>
+<div class="md:w-32 flex flex-col items-center justify-center gap-3 bg-neutral-50 rounded p-4 self-stretch shrink-0 border border-neutral-100">
+<div class="relative w-16 h-16">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-neutral-200" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-[#C9A84C]" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175" stroke-dashoffset="45" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="text-xs font-black text-[#1A1A1A]">75%</span>
+</div>
+</div>
+<span class="text-[9px] font-black text-[#C9A84C] uppercase tracking-[0.2em] text-center">Match</span>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer Shared Component -->
+<footer class="w-full py-12 px-8 mt-auto bg-[#1A1A1A] relative">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 w-full items-start">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<img alt="Maznex Logo" class="w-8 h-8 object-contain filter brightness-0 invert" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+<span class="text-white font-bold text-lg uppercase tracking-widest">Maznex Global</span>
+</div>
+<p class="text-neutral-500 font-inter text-xs leading-relaxed max-w-xs uppercase tracking-widest">
+                Elite executive placement and wealth management advisory for the sovereign individual.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="text-[#C9A84C] font-headline font-bold text-xs uppercase tracking-[0.3em] mb-2">Legal &amp; Regulatory</h4>
+<a class="text-neutral-500 font-inter text-xs uppercase tracking-widest hover:text-[#C9A84C] transition-colors" href="/services">Global Compliance</a>
+<a class="text-neutral-500 font-inter text-xs uppercase tracking-widest hover:text-[#C9A84C] transition-colors" href="/contact">Privacy Policy</a>
+<a class="text-neutral-500 font-inter text-xs uppercase tracking-widest hover:text-[#C9A84C] transition-colors" href="/contact">Terms of Service</a>
+<a class="text-neutral-500 font-inter text-xs uppercase tracking-widest hover:text-[#C9A84C] transition-colors" href="/contact">Regulatory Disclosures</a>
+</div>
+<div class="flex flex-col items-start md:items-end gap-6">
+<div class="flex gap-4">
+<a class="w-8 h-8 rounded border border-neutral-700 flex items-center justify-center text-white hover:border-[#C9A84C] hover:text-[#C9A84C] transition-all" href="/contact">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+</div>
+<p class="text-neutral-500 font-inter text-[10px] uppercase tracking-widest">© 2024 Maznex Global. All Rights Reserved.</p>
+</div>
+</div>
+</footer>
+<button class="md:hidden fixed bottom-8 right-8 w-14 h-14 rounded-full bg-[#C9A84C] text-[#1A1A1A] shadow-2xl flex items-center justify-center z-50">
+<span class="material-symbols-outlined">add</span>
+</button>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- GDPR Cookie Banner -->
+<div id="gdpr-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#1A1A1A;border-top:1px solid rgba(201,168,76,0.3);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <p style="color:#d1d1d1;font-size:13px;margin:0;flex:1;min-width:200px;">
+    We use cookies to enhance your experience and analyse site traffic. By continuing, you consent to our 
+    <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <div style="display:flex;gap:10px;">
+    <button onclick="acceptGDPR()" style="background:linear-gradient(135deg,#C9A84C,#A68936);color:#1A1A1A;border:none;padding:8px 20px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;">Accept</button>
+    <button onclick="declineGDPR()" style="background:transparent;color:#888;border:1px solid #444;padding:8px 16px;border-radius:6px;font-size:12px;cursor:pointer;">Decline</button>
+  </div>
+</div>
+<script>
+function acceptGDPR(){localStorage.setItem('gdpr','accepted');document.getElementById('gdpr-banner').style.display='none';}
+function declineGDPR(){localStorage.setItem('gdpr','declined');document.getElementById('gdpr-banner').style.display='none';}
+window.addEventListener('DOMContentLoaded',function(){if(!localStorage.getItem('gdpr'))document.getElementById('gdpr-banner').style.display='flex';});
+</script>
+<script src="/entry-popup.js"></script>
+</body></html>

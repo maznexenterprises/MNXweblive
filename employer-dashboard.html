@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sovereign Authority | Recruitment Intelligence Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary-container": "#503d00",
+                        "background": "#fcf9f8",
+                        "surface-container-highest": "#e5e2e1",
+                        "secondary-fixed-dim": "#acc7ff",
+                        "primary": "#755b00",
+                        "surface-tint": "#755b00",
+                        "primary-fixed-dim": "#e6c364",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-fixed": "#ffdfa0",
+                        "surface-dim": "#dcd9d9",
+                        "inverse-primary": "#e6c364",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#4d4637",
+                        "surface-container": "#f0eded",
+                        "tertiary": "#795900",
+                        "secondary-container": "#a8c4fe",
+                        "secondary": "#425e91",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#294678",
+                        "tertiary-container": "#cea64e",
+                        "on-background": "#1c1b1b",
+                        "surface": "#fcf9f8",
+                        "on-error": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#345083",
+                        "tertiary-fixed-dim": "#ecc165",
+                        "primary-container": "#c9a84c",
+                        "on-tertiary-container": "#533c00",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface": "#1c1b1b",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed": "#d7e2ff",
+                        "on-secondary-fixed": "#001a40",
+                        "on-tertiary-fixed": "#261a00",
+                        "on-primary-fixed": "#241a00",
+                        "on-primary-fixed-variant": "#584400",
+                        "outline-variant": "#d0c5b2",
+                        "inverse-surface": "#313030",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e5e2e1",
+                        "primary-fixed": "#ffe08f",
+                        "outline": "#7e7665",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-container-low": "#f6f3f2"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .gold-shimmer {
+            background: linear-gradient(135deg, #755b00 0%, #c9a84c 50%, #755b00 100%);
+            background-size: 200% auto;
+        }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: #f0eded; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 99px; }
+        .diagonal-split {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface custom-scrollbar">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="bg-slate-900 dark:bg-[#1c1b1b] h-screen w-64 fixed left-0 top-0 border-r-0 shadow-[40px_0_40px_-15px_rgba(117,91,0,0.06)] flex flex-col h-full py-8 px-4 z-50">
+<div class="mb-10 px-4">
+<div class="flex items-center gap-3">
+<img alt="Sovereign Logo" class="w-10 h-10 object-contain" data-alt="Abstract minimalist geometric logo for a financial firm in metallic gold and deep navy tones" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+<div>
+<h1 class="text-[#c9a84c] text-xl font-bold tracking-tighter uppercase font-headline">Sovereign</h1>
+<p class="text-slate-400 text-[10px] tracking-[0.2em] uppercase">Recruitment Portal</p>
+</div>
+</div>
+</div>
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<div class="mt-auto px-2">
+<button class="w-full gold-shimmer text-on-primary py-3 rounded-lg font-bold text-sm tracking-tight flex items-center justify-center gap-2 shadow-lg shadow-primary/20 scale-[0.98] active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-sm">add</span>
+                Post New Job
+            </button>
+</div>
+</aside>
+<!-- TopNavBar (Authority Source: JSON) -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] h-16 z-40 bg-white/85 dark:bg-[#313030]/85 backdrop-blur-md border-b border-slate-200/15 dark:border-[#7e7665]/15 flex justify-between items-center px-8 h-16 ml-64">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/20" placeholder="Search candidates, roles, or reports..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4 text-slate-600 dark:text-[#dcd9d9]">
+<button class="hover:text-[#c9a84c] transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full border-2 border-white"></span>
+</button>
+<button class="hover:text-[#c9a84c] transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<button class="text-primary font-bold text-sm hover:text-[#c9a84c] transition-colors">Invite User</button>
+<div class="flex items-center gap-3 pl-2">
+<div class="text-right">
+<p class="text-xs font-bold leading-tight">Alexander Sterling</p>
+<p class="text-[10px] text-slate-500">Managing Director</p>
+</div>
+<img alt="Manager Profile" class="w-9 h-9 rounded-full object-cover border-2 border-primary/20" data-alt="Professional headshot of a mature executive man with a confident expression in a sharp tailored suit" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-64 pt-16 min-h-screen">
+<!-- Hero Intelligence Overview -->
+<section class="bg-secondary p-12 text-on-secondary diagonal-split relative overflow-hidden">
+<div class="relative z-10 max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-12">
+<div>
+<h2 class="font-headline text-4xl font-extrabold tracking-tighter mb-2">Recruitment Intelligence</h2>
+<p class="text-secondary-fixed-dim text-lg max-w-xl font-light">Real-time analytical command center for Maznex global hiring operations.</p>
+</div>
+<div class="flex gap-4">
+<div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/5">
+<p class="text-[10px] uppercase tracking-widest text-primary-fixed-dim mb-1">Global Market Sentiment</p>
+<p class="text-xl font-bold font-headline">Bullish (+12.4%)</p>
+</div>
+</div>
+</div>
+<!-- Metric Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<div class="bg-surface-container-lowest/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-primary-container mb-4 text-3xl">hub</span>
+<p class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-semibold mb-1">Total Active Searches</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold">42</span>
+<span class="text-xs text-green-400 font-bold">+3 this week</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-primary-container mb-4 text-3xl">verified_user</span>
+<p class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-semibold mb-1">Candidates Vetted</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold">814</span>
+<span class="text-xs text-primary-container font-bold">Top 5% Talent</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-primary-container mb-4 text-3xl">handshake</span>
+<p class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-semibold mb-1">Placements in Progress</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold">12</span>
+<span class="text-xs text-primary-container font-bold">Final Stages</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest/5 backdrop-blur-sm p-6 rounded-xl border border-white/10 hover:border-primary-container/40 transition-all group">
+<span class="material-symbols-outlined text-primary-container mb-4 text-3xl">schedule</span>
+<p class="text-secondary-fixed-dim text-xs uppercase tracking-widest font-semibold mb-1">Avg. Time-to-Hire</p>
+<div class="flex items-baseline gap-2">
+<span class="text-3xl font-headline font-extrabold">18d</span>
+<span class="text-xs text-green-400 font-bold">-4d vs Industry</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Gold Accent -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-primary/20 rounded-full blur-[120px]"></div>
+</section>
+<div class="max-w-7xl mx-auto px-8 py-16 space-y-24">
+<!-- Live Pipelines & Talent Visualization -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2 space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Live Pipelines</h3>
+<button class="text-primary text-sm font-bold flex items-center gap-1 hover:underline">View All Roles <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+<div class="space-y-6">
+<!-- Role Card 1 -->
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-primary group hover:bg-surface-container-lowest transition-all duration-300 hover:shadow-[0_20px_40px_-15px_rgba(117,91,0,0.1)]">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-lg font-bold">VP of Global Strategy</h4>
+<p class="text-xs text-slate-500">London, UK • Sovereign Wealth Portfolio</p>
+</div>
+<div class="bg-primary/10 text-primary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Urgent</div>
+</div>
+<!-- Stepper -->
+<div class="relative py-8">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-slate-200 -translate-y-1/2"></div>
+<div class="absolute top-1/2 left-0 w-3/4 h-[2px] bg-primary -translate-y-1/2"></div>
+<div class="relative flex justify-between">
+<div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">1</div>
+<div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">2</div>
+<div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">3</div>
+<div class="bg-slate-200 text-slate-400 w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">4</div>
+</div>
+<div class="flex justify-between mt-3 text-[10px] uppercase tracking-tighter font-bold text-slate-400">
+<span class="text-primary">Application</span>
+<span class="text-primary">Vetting</span>
+<span class="text-primary">Interview</span>
+<span>Offer</span>
+</div>
+</div>
+<div class="flex justify-between items-center mt-4 pt-4 border-t border-slate-100">
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full" data-alt="Female recruiter in office setting" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<span class="text-xs font-medium text-slate-600">Recruiter: Sarah Jenks</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-bold">
+<span class="material-symbols-outlined text-sm">alarm</span>
+<span class="text-xs">Next Interview: Tomorrow, 10:00 AM</span>
+</div>
+</div>
+</div>
+<!-- Role Card 2 -->
+<div class="bg-surface-container-low p-6 rounded-xl border-l-4 border-slate-300 group hover:bg-surface-container-lowest transition-all duration-300">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h4 class="text-lg font-bold">Senior Quantitative Analyst</h4>
+<p class="text-xs text-slate-500">New York, US • Hedge Fund Division</p>
+</div>
+<div class="bg-slate-100 text-slate-500 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">Steady</div>
+</div>
+<div class="relative py-8">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-slate-200 -translate-y-1/2"></div>
+<div class="absolute top-1/2 left-0 w-1/4 h-[2px] bg-primary -translate-y-1/2"></div>
+<div class="relative flex justify-between">
+<div class="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">1</div>
+<div class="bg-slate-200 text-slate-400 w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">2</div>
+<div class="bg-slate-200 text-slate-400 w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">3</div>
+<div class="bg-slate-200 text-slate-400 w-8 h-8 rounded-full flex items-center justify-center z-10 text-xs font-bold ring-4 ring-white">4</div>
+</div>
+<div class="flex justify-between mt-3 text-[10px] uppercase tracking-tighter font-bold text-slate-400">
+<span class="text-primary">Application</span>
+<span>Vetting</span>
+<span>Interview</span>
+<span>Offer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Required -->
+<div class="space-y-8">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Action Required</h3>
+<div class="bg-surface-container-high rounded-xl p-8 space-y-6 border-t-2 border-primary">
+<div class="flex gap-4 items-start pb-6 border-b border-slate-200">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">assignment_ind</span>
+</div>
+<div>
+<h5 class="font-bold text-sm">Review Shortlist</h5>
+<p class="text-xs text-slate-500 mb-2">5 new candidates for Lead Developer</p>
+<button class="text-[10px] font-extrabold text-primary uppercase tracking-widest hover:underline">Launch Portal</button>
+</div>
+</div>
+<div class="flex gap-4 items-start pb-6 border-b border-slate-200">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">event_available</span>
+</div>
+<div>
+<h5 class="font-bold text-sm">Confirm Interview</h5>
+<p class="text-xs text-slate-500 mb-2">With Elena Rossi for UX Director</p>
+<button class="text-[10px] font-extrabold text-primary uppercase tracking-widest hover:underline">View Calendar</button>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<div class="bg-primary text-white p-2 rounded-lg">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<h5 class="font-bold text-sm">Sign Offer Letter</h5>
+<p class="text-xs text-slate-500 mb-2">Final approval for Senior Partner</p>
+<button class="text-[10px] font-extrabold text-primary uppercase tracking-widest hover:underline">Open DocuSign</button>
+</div>
+</div>
+</div>
+<!-- Sovereign AI Insights -->
+<div class="bg-inverse-surface text-white rounded-xl p-8 relative overflow-hidden group">
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<h4 class="font-headline font-bold text-primary-container tracking-widest uppercase text-xs">Sovereign AI Insights</h4>
+</div>
+<p class="text-sm font-medium mb-4 leading-relaxed">Predictive analysis suggests a 15% increase in market competition for FinTech talent next quarter.</p>
+<div class="flex items-center gap-4 text-[10px] font-bold text-primary-container uppercase">
+<span>Risk Level: Medium</span>
+<span class="w-1 h-1 bg-primary-container rounded-full"></span>
+<span>Rec: Early Hiring</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-9xl">insights</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sovereign AI Matches -->
+<section class="space-y-8">
+<div class="flex justify-between items-center">
+<h3 class="font-headline text-2xl font-bold tracking-tight">Recent High-Value Matches</h3>
+<div class="flex items-center gap-2 text-xs font-medium text-slate-500">
+<span>Powered by Sovereign Neural Matching</span>
+<span class="material-symbols-outlined text-sm">info</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Candidate 1 -->
+<div class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-lowest transition-all border-b-2 border-transparent hover:border-primary">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Portrait of a professional male candidate in business attire with blurred modern office background" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div>
+<h5 class="font-bold text-lg">Dr. Marcus Thorne</h5>
+<p class="text-xs text-slate-500">Ex-Goldman Sachs • 12 Yrs Exp.</p>
+</div>
+</div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Match Strength</span>
+<span class="text-xl font-headline font-extrabold text-primary">98%</span>
+</div>
+<div class="h-2 bg-slate-200 rounded-full mb-6 overflow-hidden">
+<div class="h-full bg-primary" style="width: 98%;"></div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="text-[10px] font-bold bg-white px-2 py-1 rounded text-slate-600">Algo Trading</span>
+<span class="text-[10px] font-bold bg-white px-2 py-1 rounded text-slate-600">Risk Mitigation</span>
+</div>
+<button class="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Request Introduction</button>
+</div>
+<!-- Candidate 2 -->
+<div class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-lowest transition-all border-b-2 border-transparent hover:border-primary">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Close-up of a high-achieving professional woman with an intelligent and focused look" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div>
+<h5 class="font-bold text-lg">Elena Vance</h5>
+<p class="text-xs text-slate-500">Head of Operations • Fortune 500</p>
+</div>
+</div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Match Strength</span>
+<span class="text-xl font-headline font-extrabold text-primary">94%</span>
+</div>
+<div class="h-2 bg-slate-200 rounded-full mb-6 overflow-hidden">
+<div class="h-full bg-primary" style="width: 94%;"></div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="text-[10px] font-bold bg-white px-2 py-1 rounded text-slate-600">Scale Strategy</span>
+<span class="text-[10px] font-bold bg-white px-2 py-1 rounded text-slate-600">Global Logistics</span>
+</div>
+<button class="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Request Introduction</button>
+</div>
+<!-- Candidate 3 -->
+<div class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-lowest transition-all border-b-2 border-transparent hover:border-primary">
+<div class="flex items-center gap-4 mb-6">
+<img class="w-16 h-16 rounded-lg object-cover" data-alt="Confident male senior developer in a sleek workspace setting" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div>
+<h5 class="font-bold text-lg">Julian Kael</h5>
+<p class="text-xs text-slate-500">Chief Architect • FinTech Unicorn</p>
+</div>
+</div>
+<div class="flex items-center justify-between mb-6">
+<span class="text-xs font-bold text-slate-400 tracking-widest uppercase">Match Strength</span>
+<span class="text-xl font-headline font-extrabold text-primary">91%</span>
+</div>
+<div class="h-2 bg-slate-200 rounded-full mb-6 overflow-hidden">
+<div class="h-full bg-primary" style="width: 91%;"></div>
+</div>
+<div class="flex flex-wrap gap-2 mb-8">
+<span class="text-[10px] font-bold bg-white px-2 py-1 rounded text-slate-600">Blockchain</span>
+<span class="text-[10px] font-bold bg-white px-2 py-1 rounded text-slate-600">Security Audit</span>
+</div>
+<button class="w-full py-2 border border-primary text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-colors">Request Introduction</button>
+</div>
+</div>
+</section>
+<!-- Financial Overview Section -->
+<section class="bg-surface-container rounded-3xl p-12">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+<div class="space-y-4">
+<h3 class="font-headline text-3xl font-extrabold tracking-tighter">Financial Stewardship</h3>
+<p class="text-slate-500 max-w-md">Comprehensive tracking of your YTD recruitment investment and budget utilization across all active departments.</p>
+<div class="flex gap-12 mt-8">
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">YTD Recruitment Spend</p>
+<p class="text-2xl font-bold">$1,240,000</p>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-slate-400 tracking-widest mb-1">Remaining Budget</p>
+<p class="text-2xl font-bold text-primary">$460,000</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-auto space-y-4">
+<div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center justify-between gap-12">
+<div>
+<p class="text-xs font-bold text-slate-600">Budget Health Index</p>
+<p class="text-[10px] text-slate-400">Stable within parameters</p>
+</div>
+<div class="relative w-16 h-16">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-slate-100" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="32" cy="32" fill="transparent" r="28" stroke="currentColor" stroke-dasharray="175" stroke-dashoffset="40" stroke-width="6"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center text-[10px] font-bold">75%</div>
+</div>
+</div>
+<button class="w-full gold-shimmer text-white py-4 rounded-xl font-bold shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+                            Download Statements
+                        </button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer (Authority Source: JSON) -->
+<footer class="w-[calc(100%-16rem)] ml-64 py-12 border-t border-slate-200 dark:border-[#313030] bg-slate-50 dark:bg-[#1c1b1b]">
+<div class="flex flex-row justify-between items-center px-12 max-w-7xl mx-auto">
+<div class="space-y-2">
+<span class="font-bold text-[#c9a84c] text-lg font-headline">Sovereign</span>
+<p class="text-slate-500 dark:text-[#dcd9d9] font-manrope text-xs tracking-tight">© 2024 Maznex Sovereign Authority. All systems operational.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 dark:text-[#dcd9d9] font-manrope text-xs tracking-tight hover:text-[#c9a84c] transition-all" href="/contact">Privacy Policy</a>
+<a class="text-slate-500 dark:text-[#dcd9d9] font-manrope text-xs tracking-tight hover:text-[#c9a84c] transition-all" href="/contact">Terms of Service</a>
+<a class="text-slate-500 dark:text-[#dcd9d9] font-manrope text-xs tracking-tight hover:text-[#c9a84c] transition-all flex items-center gap-1" href="/contact">
+<span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    System Status
+                </a>
+</div>
+</div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- GDPR Cookie Banner -->
+<div id="gdpr-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#1A1A1A;border-top:1px solid rgba(201,168,76,0.3);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <p style="color:#d1d1d1;font-size:13px;margin:0;flex:1;min-width:200px;">
+    We use cookies to enhance your experience and analyse site traffic. By continuing, you consent to our 
+    <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <div style="display:flex;gap:10px;">
+    <button onclick="acceptGDPR()" style="background:linear-gradient(135deg,#C9A84C,#A68936);color:#1A1A1A;border:none;padding:8px 20px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;">Accept</button>
+    <button onclick="declineGDPR()" style="background:transparent;color:#888;border:1px solid #444;padding:8px 16px;border-radius:6px;font-size:12px;cursor:pointer;">Decline</button>
+  </div>
+</div>
+<script>
+function acceptGDPR(){localStorage.setItem('gdpr','accepted');document.getElementById('gdpr-banner').style.display='none';}
+function declineGDPR(){localStorage.setItem('gdpr','declined');document.getElementById('gdpr-banner').style.display='none';}
+window.addEventListener('DOMContentLoaded',function(){if(!localStorage.getItem('gdpr'))document.getElementById('gdpr-banner').style.display='flex';});
+</script>
+</body></html>

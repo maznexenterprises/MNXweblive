@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maznex | The Impact of Global Immigration Changes on Financial Recruitment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#755b00",
+              "gold": "#C9A84C",
+              "prestige-black": "#1A1A1A",
+              "on-secondary": "#ffffff",
+              "tertiary": "#795900",
+              "error": "#ba1a1a",
+              "on-error-container": "#93000a",
+              "surface-variant": "#e5e2e1",
+              "on-tertiary-fixed": "#261a00",
+              "on-primary-fixed": "#241a00",
+              "surface-container-low": "#f6f3f2",
+              "on-primary": "#ffffff",
+              "outline": "#7e7665",
+              "secondary-fixed-dim": "#acc7ff",
+              "inverse-on-surface": "#f3f0ef",
+              "inverse-primary": "#e6c364",
+              "on-background": "#1c1b1b",
+              "on-surface-variant": "#4d4637",
+              "surface-container-highest": "#e5e2e1",
+              "primary-fixed-dim": "#e6c364",
+              "on-secondary-container": "#345083",
+              "surface-container-high": "#eae7e7",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-bright": "#fcf9f8",
+              "on-secondary-fixed": "#001a40",
+              "tertiary-fixed": "#ffdfa0",
+              "surface-container-lowest": "#ffffff",
+              "surface": "#fcf9f8",
+              "primary-container": "#c9a84c",
+              "tertiary-container": "#cea64e",
+              "background": "#fcf9f8",
+              "outline-variant": "#d0c5b2",
+              "on-tertiary-container": "#533c00",
+              "on-primary-fixed-variant": "#584400",
+              "on-surface": "#1c1b1b",
+              "surface-container": "#f0eded",
+              "secondary-container": "#a8c4fe",
+              "secondary": "#1A1A1A",
+              "on-primary-container": "#503d00",
+              "tertiary-fixed-dim": "#ecc165",
+              "primary-fixed": "#ffe08f",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "secondary-fixed": "#d7e2ff",
+              "on-secondary-fixed-variant": "#294678",
+              "surface-dim": "#dcd9d9",
+              "inverse-surface": "#313030",
+              "surface-tint": "#755b00",
+              "error-container": "#ffdad6"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "manrope": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .diagonal-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .diagonal-clip-path {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+        .shimmer-btn {
+            background: linear-gradient(90deg, #755b00, #c9a84c, #755b00);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .shimmer-btn:hover {
+            background-position: right center;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<main class="pt-24 bg-white">
+<!-- Breadcrumb -->
+<div class="max-w-screen-xl mx-auto px-8 py-6">
+<nav class="flex items-center gap-2 text-xs font-label uppercase tracking-widest text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="/">Home</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="/insights">Insights</a>
+<span class="material-symbols-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Article</span>
+</nav>
+</div>
+<!-- Hero Section -->
+<header class="relative w-full h-[614px] min-h-[500px] overflow-hidden">
+<img alt="Corporate skyscraper reflecting blue sky and gold sunlight" class="absolute inset-0 w-full h-full object-cover" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div class="absolute inset-0 bg-gradient-to-t from-prestige-black via-prestige-black/40 to-transparent"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 md:p-20">
+<div class="max-w-screen-xl mx-auto">
+<div class="inline-block px-3 py-1 bg-gold/20 backdrop-blur-md border-l-4 border-gold text-gold font-label text-xs font-bold tracking-widest uppercase mb-6">
+                    Global Markets
+                </div>
+<h1 class="text-white font-headline text-4xl md:text-6xl font-extrabold tracking-tighter leading-tight max-w-4xl mb-8">
+                    The Impact of Global Immigration Changes on Financial Recruitment in the UK, Europe, and USA
+                </h1>
+<div class="flex flex-wrap items-center gap-6 text-surface-variant font-label text-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold">calendar_today</span>
+<span>October 24, 2024</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold">person</span>
+<span>By Alistair Vance, Head of Global Strategy</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-gold">schedule</span>
+<span>12 Min Read</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Article Content & Sidebar Grid -->
+<section class="max-w-screen-xl mx-auto px-8 py-20 grid grid-cols-1 lg:grid-cols-12 gap-16 bg-white">
+<!-- Main Column -->
+<article class="lg:col-span-8">
+<div class="space-y-8 text-on-surface-variant leading-relaxed text-lg">
+<p class="text-2xl font-medium text-prestige-black font-headline leading-snug">
+                    As international borders shift under the weight of new legislative frameworks, the financial services sector finds itself at a critical crossroads. The talent war is no longer local—it is a geopolitical challenge.
+                </p>
+<h2 class="text-3xl font-bold text-prestige-black font-headline pt-4 border-l-4 border-gold pl-4">The New Era of Restricted Mobility</h2>
+<p>
+                    Across the United Kingdom, the post-Brexit landscape has solidified into a rigid points-based system that, while aiming for quality, has introduced significant friction into the lateral hiring of mid-level analysts and senior quants. Meanwhile, in the United States, the tightening of H-1B visa scrutiny has left major Wall Street firms scrambling to fill critical roles in fintech and risk management.
+                </p>
+<div class="p-8 bg-surface-container-low border-l-4 border-gold rounded-r-lg my-12 italic text-prestige-black font-medium">
+                    "The shortage of skilled workers in the financial sector is no longer a forecast; it is a present-day reality that is driving up operational costs and delaying digital transformation across the Eurozone."
+                </div>
+<h3 class="text-2xl font-bold text-prestige-black font-headline">Hiring Hurdles in a Fragmented Europe</h3>
+<p>
+                    The European Union, traditionally a bastion of free movement, is seeing individual member states implement more stringent local labor market tests. This fragmentation makes it increasingly difficult for Pan-European banks to rotate their workforce efficiently. The result is a growing backlog of vacancies in specialized sectors such as ESG reporting and Cybersecurity Compliance.
+                </p>
+<h3 class="text-2xl font-bold text-prestige-black font-headline">Addressing the Global Skills Gap</h3>
+<p>
+                    To combat these changes, Maznex has observed a significant shift in recruitment strategies. Firms are moving away from traditional "location-centric" hiring and embracing decentralized hubs in emerging markets. However, the requirement for localized expertise remains paramount, leading to a premium on candidates who possess both the technical skill set and the legal right to work within these shifting territories.
+                </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 py-10">
+<img alt="Professional team in a boardroom meeting" class="rounded-xl shadow-lg border border-gold/10" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<img alt="Close up of digital financial charts" class="rounded-xl shadow-lg border border-gold/10" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%23262626"/><polyline points="50,250 120,180 200,200 280,120 350,80" fill="none" stroke="%23C9A84C" stroke-width="3"/><text x="200" y="280" text-anchor="middle" font-family="Arial" font-size="12" fill="%23888">Financial Analytics</text></svg>"/>
+</div>
+<p>
+                    The road ahead requires a dual-pronged approach: investing in local training pipelines and leveraging AI-driven recruitment platforms to identify global talent that meets specific visa criteria before the search even begins.
+                </p>
+</div>
+<!-- Social Share -->
+<div class="mt-16 pt-8 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-sm font-label font-bold text-on-surface-variant uppercase tracking-tighter">Share this insight</span>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-prestige-black hover:bg-gold hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-prestige-black hover:bg-gold hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">link</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-12">
+<!-- Newsletter Sign Up -->
+<div class="bg-prestige-black p-8 rounded-xl text-white relative overflow-hidden shadow-xl border border-gold/20">
+<div class="absolute top-0 right-0 w-32 h-32 bg-gold/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
+<h4 class="text-xl font-headline font-bold mb-4 relative z-10">Get Market Intel</h4>
+<p class="text-sm text-surface-variant/80 mb-6 relative z-10">Receive weekly executive briefings on global financial shifts and recruitment trends.</p>
+<div class="space-y-4 relative z-10">
+<input class="w-full bg-white/10 border border-white/20 rounded-md px-4 py-3 text-sm focus:ring-2 focus:ring-gold outline-none placeholder:text-zinc-500" placeholder="Professional Email" type="email"/>
+<button class="shimmer-btn w-full py-3 rounded-md font-bold text-sm text-white uppercase tracking-widest">Subscribe</button>
+</div>
+</div>
+<!-- Recent Insights -->
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/20">
+<h4 class="text-lg font-headline font-bold text-prestige-black mb-8 border-b border-gold/30 pb-2">Recent Insights</h4>
+<ul class="space-y-8">
+<li>
+<a class="group block" href="/insights">
+<span class="text-xs font-label text-gold font-bold uppercase tracking-widest">Technology</span>
+<h5 class="text-base font-semibold text-prestige-black group-hover:text-gold transition-colors mt-1">AI in Finance: Beyond the Hype and into the Infrastructure</h5>
+<p class="text-xs text-on-surface-variant mt-2">Oct 20, 2024</p>
+</a>
+</li>
+<li>
+<a class="group block" href="/insights">
+<span class="text-xs font-label text-gold font-bold uppercase tracking-widest">Geopolitics</span>
+<h5 class="text-base font-semibold text-prestige-black group-hover:text-gold transition-colors mt-1">Wars &amp; Finance: Navigating Liquidity in Conflict Zones</h5>
+<p class="text-xs text-on-surface-variant mt-2">Oct 15, 2024</p>
+</a>
+</li>
+<li>
+<a class="group block" href="/insights">
+<span class="text-xs font-label text-gold font-bold uppercase tracking-widest">Economy</span>
+<h5 class="text-base font-semibold text-prestige-black group-hover:text-gold transition-colors mt-1">Global Recession Warnings: Managing Client Expectations</h5>
+<p class="text-xs text-on-surface-variant mt-2">Oct 12, 2024</p>
+</a>
+</li>
+</ul>
+</div>
+<!-- Author Bio -->
+<div class="bg-white p-8 rounded-xl border border-outline-variant/20 shadow-sm">
+<div class="flex items-center gap-4 mb-4">
+<img alt="Alistair Vance portrait" class="w-16 h-16 rounded-full object-cover border-2 border-gold" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div>
+<h6 class="font-bold text-prestige-black">Alistair Vance</h6>
+<p class="text-xs text-gold font-bold uppercase">Head of Strategy</p>
+</div>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                    Alistair oversees global talent acquisition strategies for Fortune 500 banks across three continents.
+                </p>
+</div>
+</aside>
+</section>
+<!-- Featured Footer Section -->
+<section class="bg-surface-dim py-20">
+<div class="max-w-screen-xl mx-auto px-8">
+<h2 class="text-2xl font-headline font-bold mb-12 flex items-center gap-3">
+<span class="w-8 h-[2px] bg-gold"></span>
+                Suggested for You
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-outline-variant/10">
+<img alt="Financial advisor using tablet" class="w-full h-48 object-cover" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2 text-prestige-black">How FinTech is Redefining Wealth Management</h3>
+<a class="text-gold text-sm font-bold flex items-center gap-2 group" href="/insights">Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-outline-variant/10">
+<img alt="Modern office architecture" class="w-full h-48 object-cover" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2 text-prestige-black">Sustainable Investing: The New Corporate Mandate</h3>
+<a class="text-gold text-sm font-bold flex items-center gap-2 group" href="/insights">Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+<div class="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-outline-variant/10">
+<img alt="Tech professionals collaborating" class="w-full h-48 object-cover" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div class="p-6">
+<h3 class="font-bold text-lg mb-2 text-prestige-black">The Hybrid Work Debate in Global Finance</h3>
+<a class="text-gold text-sm font-bold flex items-center gap-2 group" href="/insights">Read More <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component applied with theme) -->
+<footer class="bg-[#1A1A1A] w-full py-12 px-8 mt-auto border-t border-gold/10">
+<div class="max-w-screen-2xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mb-12">
+<div>
+<div class="flex items-center gap-3 mb-6">
+<img alt="Maznex Logo" class="h-8 w-8 object-contain mix-blend-screen bg-transparent" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+<div class="text-white font-bold text-xl uppercase tracking-widest">Maznex</div>
+</div>
+<p class="text-neutral-500 font-inter text-sm leading-relaxed max-w-sm">
+                    The leading global authority in financial architectural recruitment and strategic advisory. Trusted by the world's most stable institutions.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<h6 class="text-[#C9A84C] font-inter text-xs uppercase tracking-widest font-bold">Solutions</h6>
+<ul class="text-neutral-500 font-inter text-xs uppercase tracking-widest space-y-3">
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/recruitment">Executive Search</a></li>
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/services">Risk Advisory</a></li>
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/recruitment">FinTech Talent</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h6 class="text-[#C9A84C] font-inter text-xs uppercase tracking-widest font-bold">Legal</h6>
+<ul class="text-neutral-500 font-inter text-xs uppercase tracking-widest space-y-3">
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/contact">Privacy Policy</a></li>
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/contact">Terms of Service</a></li>
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/contact">Regulatory Disclosures</a></li>
+</ul>
+</div>
+</div>
+<div class="space-y-4">
+<h6 class="text-[#C9A84C] font-inter text-xs uppercase tracking-widest font-bold">Global Presence</h6>
+<ul class="text-neutral-500 font-inter text-xs uppercase tracking-widest space-y-3">
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/services">Global Compliance</a></li>
+<li><a class="hover:text-[#C9A84C] transition-colors" href="/contact">Office Locations</a></li>
+</ul>
+<div class="flex gap-4 pt-4">
+<a class="text-neutral-500 hover:text-[#C9A84C] transition-colors" href="https://www.linkedin.com/company/maznex" target="_blank">LinkedIn</a>
+<a class="text-neutral-500 hover:text-[#C9A84C] transition-colors" href="/contact">Bloomberg</a>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-neutral-500 font-inter text-xs uppercase tracking-widest">© 2024 Maznex Global. All Rights Reserved.</p>
+<div class="flex gap-6">
+<span class="text-neutral-700 font-inter text-[10px] tracking-widest uppercase">Sovereign Standard Recruitment</span>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- GDPR Cookie Banner -->
+<div id="gdpr-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#1A1A1A;border-top:1px solid rgba(201,168,76,0.3);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <p style="color:#d1d1d1;font-size:13px;margin:0;flex:1;min-width:200px;">
+    We use cookies to enhance your experience and analyse site traffic. By continuing, you consent to our 
+    <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <div style="display:flex;gap:10px;">
+    <button onclick="acceptGDPR()" style="background:linear-gradient(135deg,#C9A84C,#A68936);color:#1A1A1A;border:none;padding:8px 20px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;">Accept</button>
+    <button onclick="declineGDPR()" style="background:transparent;color:#888;border:1px solid #444;padding:8px 16px;border-radius:6px;font-size:12px;cursor:pointer;">Decline</button>
+  </div>
+</div>
+<script>
+function acceptGDPR(){localStorage.setItem('gdpr','accepted');document.getElementById('gdpr-banner').style.display='none';}
+function declineGDPR(){localStorage.setItem('gdpr','declined');document.getElementById('gdpr-banner').style.display='none';}
+window.addEventListener('DOMContentLoaded',function(){if(!localStorage.getItem('gdpr'))document.getElementById('gdpr-banner').style.display='flex';});
+</script>
+<script src="/entry-popup.js"></script>
+</body></html>

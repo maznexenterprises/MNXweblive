@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maznex | World-Class Financial Services &amp; Recruitment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#C9A84C",
+                        "primary-container": "#A68936",
+                        "on-primary": "#1A1A1A",
+                        "surface": "#1A1A1A",
+                        "on-surface": "#ffffff",
+                        "on-surface-variant": "#d1d1d1",
+                        "background": "#1A1A1A",
+                        "secondary": "#262626",
+                        "outline": "#C9A84C",
+                        "outline-variant": "#404040",
+                        "surface-container-low": "#1F1F1F",
+                        "surface-container-lowest": "#242424",
+                        "surface-container-high": "#2A2A2A",
+                        "primary-fixed-dim": "#C9A84C"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .clip-path-diagonal-inverse {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1A1A1A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #C9A84C;
+            border-radius: 99px;
+        }
+        .gold-shimmer {
+            background: linear-gradient(135deg, #C9A84C 0%, #A68936 50%, #C9A84C 100%);
+            background-size: 200% 200%;
+        }
+        .gold-underline {
+            background: linear-gradient(to right, #C9A84C, #C9A84C);
+            background-repeat: no-repeat;
+            background-size: 100% 3px;
+            background-position: 0 95%;
+        }
+        .bento-card:hover {
+            box-shadow: 0 0 40px rgba(201,168,76,0.1);
+            transform: translateY(-4px);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#1A1A1A] pt-20" id="home">
+<!-- Animated Background Simulation -->
+<div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+<div class="absolute top-1/4 left-1/4 w-32 h-32 border-l-2 border-t-2 border-primary rotate-45"></div>
+<div class="absolute top-2/3 right-1/4 w-48 h-48 border-r-2 border-b-2 border-primary rotate-12"></div>
+<div class="absolute bottom-1/4 left-1/3 w-16 h-16 bg-primary/20 rounded-full"></div>
+<div class="absolute top-1/2 right-10 w-24 h-24 border border-primary/40 rotate-45"></div>
+</div>
+<div class="relative z-10 text-center px-6 max-w-5xl">
+<h1 class="font-headline text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 leading-[1.1]">
+                World-Class Financial Services. <br/>
+<span class="gold-underline text-primary">Delivered Globally.</span>
+</h1>
+<p class="text-white/60 text-base md:text-xl max-w-2xl mx-auto mb-12 font-light">
+                Audit · Tax · Finance · Outsourced Accounting for Businesses in Every Country and Every Sector.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+<button class="w-full sm:w-auto gold-shimmer text-on-primary font-headline font-bold uppercase tracking-widest px-8 md:px-10 py-4 md:py-5 rounded-lg shadow-2xl shadow-primary/20 hover:scale-105 transition-transform">
+                    Explore Our Services
+                </button>
+<button class="w-full sm:w-auto border border-white/30 text-white font-headline font-bold uppercase tracking-widest px-8 md:px-10 py-4 md:py-5 rounded-lg hover:bg-white/10 transition-colors">
+                    Book a Free Consultation
+                </button>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 animate-bounce flex flex-col items-center gap-2">
+<span class="text-white/40 uppercase text-[10px] tracking-[0.3em] font-bold">Scroll</span>
+<span class="material-symbols-outlined text-primary text-3xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Stats Bar -->
+<section class="bg-secondary py-12 md:py-16 relative z-20 border-y border-white/5">
+<div class="max-w-7xl mx-auto px-8">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 text-center items-center">
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">50+</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">Clients</div>
+</div>
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">10+</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">Years</div>
+</div>
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">4</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">Countries</div>
+</div>
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">9</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">Services</div>
+</div>
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">100%</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">ACCA Qualified</div>
+</div>
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">500+</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">Network Pros</div>
+</div>
+<div class="group">
+<div class="text-primary text-3xl md:text-4xl font-black mb-1">30+</div>
+<div class="text-white/60 text-[10px] md:text-xs uppercase tracking-widest font-bold">Global Placements</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Snapshot (Bento Grid) -->
+<section class="py-24 bg-surface px-4 md:px-8" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="mb-16">
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-white mb-4">Precision Services</h2>
+<div class="w-24 h-1 bg-primary mb-6"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service Cards -->
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">analytics</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Audit</h3>
+<p class="text-white/60 text-sm leading-relaxed">Rigorous financial scrutiny and compliance reporting for international entities.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">account_balance</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Tax</h3>
+<p class="text-white/60 text-sm leading-relaxed">Strategic global tax planning and cross-border liability optimization.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">troubleshoot</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Advisory</h3>
+<p class="text-white/60 text-sm leading-relaxed">Expert financial consulting to navigate complex market expansions.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">menu_book</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Bookkeeping</h3>
+<p class="text-white/60 text-sm leading-relaxed">Meticulous day-to-day transaction recording with cloud-based precision.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">payments</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Payroll</h3>
+<p class="text-white/60 text-sm leading-relaxed">Automated international payroll systems ensuring full local compliance.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">description</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Statutory Accounts</h3>
+<p class="text-white/60 text-sm leading-relaxed">Preparing end-of-year accounts that meet all legal filing requirements.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">security</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Corporate Secretarial</h3>
+<p class="text-white/60 text-sm leading-relaxed">Managing governance and compliance for multi-region structures.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">work_outline</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">Outsourced CFO</h3>
+<p class="text-white/60 text-sm leading-relaxed">High-level financial strategy and leadership without the full-time overhead.</p>
+</div>
+<div class="bento-card bg-surface-container-low p-8 transition-all duration-300 border-l-4 border-transparent hover:border-primary rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl mb-4">groups</span>
+<h3 class="font-headline text-xl font-bold mb-3 text-white">VAT Services</h3>
+<p class="text-white/60 text-sm leading-relaxed">Managing complex VAT registrations and returns across global borders.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Two Divisions Banner -->
+<section class="relative bg-secondary overflow-hidden" id="recruitment">
+<div class="grid md:grid-cols-2">
+<!-- Division 1 -->
+<div class="relative min-h-[400px] md:min-h-[600px] flex items-center p-8 lg:p-24 overflow-hidden group">
+<div class="absolute inset-0 bg-black/60 z-10"></div>
+<img alt="Corporate financial audit" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div class="relative z-20 max-w-md">
+<span class="material-symbols-outlined text-primary text-6xl mb-6">bar_chart</span>
+<h2 class="font-headline text-3xl font-extrabold text-white mb-4">Financial Services &amp; Audit</h2>
+<p class="text-white/70 mb-8 leading-relaxed">Comprehensive audit solutions and fiscal strategies tailored for the global market.</p>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest text-sm hover:bg-primary-container transition-colors">Explore Services</button>
+</div>
+</div>
+<!-- Division 2 -->
+<div class="relative min-h-[400px] md:min-h-[600px] flex items-center p-8 lg:p-24 overflow-hidden group">
+<div class="absolute inset-0 bg-black/70 z-10"></div>
+<img alt="Recruitment meeting" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+<div class="relative z-20 max-w-md">
+<div class="inline-block bg-primary text-on-primary text-[10px] font-black tracking-[0.2em] px-3 py-1 mb-6 rounded">NEW SERVICE</div>
+<span class="material-symbols-outlined text-primary text-6xl mb-6">handshake</span>
+<h2 class="font-headline text-3xl font-extrabold text-white mb-4">Finance &amp; Tax Recruitment</h2>
+<p class="text-white/70 mb-8 leading-relaxed">Connecting top-tier financial talent with world-leading organizations.</p>
+<button class="bg-white text-on-primary px-8 py-4 rounded-lg font-headline font-bold uppercase tracking-widest text-sm hover:bg-white/90 transition-colors">Find a Professional</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Teaser -->
+<section class="py-24 bg-surface px-4 md:px-8" id="packages">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-white mb-4">Strategic Packages</h2>
+<p class="text-white/60 max-w-2xl mx-auto">Scalable solutions designed for every stage of your business journey.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-10 border border-white/5 rounded-2xl transition-transform hover:-translate-y-2">
+<h3 class="font-headline text-xl font-bold mb-2 text-white">Starter</h3>
+<div class="text-3xl font-black text-primary mb-6">£299<span class="text-sm font-normal text-white/40">/mo</span></div>
+<ul class="text-left space-y-4 text-sm text-white/70 mb-10">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Monthly Bookkeeping</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Annual Accounts</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Personal Tax Return</li>
+</ul>
+<button class="w-full border border-primary text-primary font-bold py-3 rounded-lg hover:bg-primary/10 transition-colors">Get Started</button>
+</div>
+<!-- Card 2 (Featured) -->
+<div class="bg-surface-container-high p-10 border-2 border-primary rounded-2xl shadow-[0_0_40px_rgba(201,168,76,0.15)] relative md:scale-110 z-10 my-8 md:my-0">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-4 py-1 text-[10px] font-black tracking-widest uppercase rounded">Most Popular</div>
+<h3 class="font-headline text-xl font-bold mb-2 text-white">Growth</h3>
+<div class="text-3xl font-black text-primary mb-6">£599<span class="text-sm font-normal text-white/40">/mo</span></div>
+<ul class="text-left space-y-4 text-sm text-white/70 mb-10">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Everything in Starter</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Quarterly VAT Returns</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Corporate Tax Filing</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Payroll for 5 Staff</li>
+</ul>
+<button class="w-full gold-shimmer text-on-primary font-bold py-3 rounded-lg shadow-lg hover:scale-[1.02] transition-transform">Choose Growth</button>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-10 border border-white/5 rounded-2xl transition-transform hover:-translate-y-2">
+<h3 class="font-headline text-xl font-bold mb-2 text-white">Scale</h3>
+<div class="text-3xl font-black text-primary mb-6">£1,199<span class="text-sm font-normal text-white/40">/mo</span></div>
+<ul class="text-left space-y-4 text-sm text-white/70 mb-10">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Dedicated CFO Advisory</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Full International Payroll</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> M&amp;A Support</li>
+</ul>
+<button class="w-full border border-primary text-primary font-bold py-3 rounded-lg hover:bg-primary/10 transition-colors">Contact for Scale</button>
+</div>
+</div>
+</section>
+<!-- Reviews Carousel -->
+<section class="py-24 bg-secondary overflow-hidden relative border-y border-white/5">
+<div class="max-w-7xl mx-auto px-8 mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div>
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-white mb-4">Trusted Worldwide</h2>
+<div class="w-24 h-1 bg-primary"></div>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-primary/40 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-primary/40 flex items-center justify-center text-primary hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-8 px-8 pb-12 no-scrollbar scroll-smooth">
+<!-- Review Cards -->
+<div class="flex-none w-[300px] md:w-[350px] bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white/80 italic mb-6 leading-relaxed text-sm md:text-base">"Maznex transformed our international accounting structure. Their precision is unmatched in the sector."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary text-xs border border-primary/30">JD</div>
+<div>
+<div class="text-white font-bold text-sm">James Donovan</div>
+<div class="text-white/40 text-[10px] uppercase font-bold tracking-widest">Global Ops, TechCorp</div>
+</div>
+</div>
+</div>
+<div class="flex-none w-[300px] md:w-[350px] bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white/80 italic mb-6 leading-relaxed text-sm md:text-base">"The recruitment division found us a CFO within 3 weeks. High-caliber network."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary text-xs border border-primary/30">SA</div>
+<div>
+<div class="text-white font-bold text-sm">Sarah Al-Fayed</div>
+<div class="text-white/40 text-[10px] uppercase font-bold tracking-widest">Director, Al-Fayed Invest</div>
+</div>
+</div>
+</div>
+<div class="flex-none w-[300px] md:w-[350px] bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white/80 italic mb-6 leading-relaxed text-sm md:text-base">"Reliable, professional, and globally minded. Maznex is our go-to for all tax advisory."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary text-xs border border-primary/30">MK</div>
+<div>
+<div class="text-white font-bold text-sm">Marcus Klein</div>
+<div class="text-white/40 text-[10px] uppercase font-bold tracking-widest">CEO, Klein Pharma</div>
+</div>
+</div>
+</div>
+<div class="flex-none w-[300px] md:w-[350px] bg-white/5 p-8 rounded-2xl backdrop-blur-sm border border-white/5">
+<div class="flex gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-white/80 italic mb-6 leading-relaxed text-sm md:text-base">"Exceptional attention to detail in statutory filings. Highly recommended."</p>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center font-bold text-primary text-xs border border-primary/30">EL</div>
+<div>
+<div class="text-white font-bold text-sm">Elena Laine</div>
+<div class="text-white/40 text-[10px] uppercase font-bold tracking-widest">HR Lead, Nordics Digital</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Global Map Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-4 md:px-8 text-center">
+<h2 class="font-headline text-3xl md:text-4xl font-extrabold text-white mb-12">Global Footprint</h2>
+<div class="relative w-full aspect-video bg-surface-container-high rounded-3xl overflow-hidden shadow-2xl border border-white/5">
+<!-- Abstract World Map -->
+<img alt="Global network map" class="w-full h-full object-cover opacity-10 grayscale invert" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231B3A6B"/><circle cx="200" cy="150" r="100" fill="none" stroke="%23C9A84C" stroke-width="2"/><line x1="100" y1="150" x2="300" y2="150" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><line x1="200" y1="50" x2="200" y2="250" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><text x="200" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="%23C9A84C">Global Network</text></svg>"/>
+<!-- Interactive Dots -->
+<div class="absolute top-[30%] left-[20%] group cursor-pointer">
+<div class="absolute inset-0 w-3 md:w-4 h-3 md:h-4 bg-primary rounded-full animate-ping opacity-75"></div>
+<div class="w-3 md:w-4 h-3 md:h-4 bg-primary rounded-full shadow-[0_0_20px_rgba(201,168,76,0.8)]"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-high border border-primary/40 px-3 py-1 rounded text-[10px] font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-white">New York, USA</div>
+</div>
+<div class="absolute top-[35%] left-[48%] group cursor-pointer">
+<div class="absolute inset-0 w-3 md:w-4 h-3 md:h-4 bg-primary rounded-full animate-ping opacity-75"></div>
+<div class="w-3 md:w-4 h-3 md:h-4 bg-primary rounded-full shadow-[0_0_20px_rgba(201,168,76,0.8)]"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-high border border-primary/40 px-3 py-1 rounded text-[10px] font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-white">London, UK (HQ)</div>
+</div>
+<div class="absolute top-[55%] left-[75%] group cursor-pointer">
+<div class="absolute inset-0 w-3 md:w-4 h-3 md:h-4 bg-primary rounded-full animate-ping opacity-75"></div>
+<div class="w-3 md:w-4 h-3 md:h-4 bg-primary rounded-full shadow-[0_0_20px_rgba(201,168,76,0.8)]"></div>
+<div class="absolute top-6 left-1/2 -translate-x-1/2 bg-surface-container-high border border-primary/40 px-3 py-1 rounded text-[10px] font-bold shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity text-white">Singapore</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Side Concierge -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col space-y-3 items-end">
+<div class="bg-primary text-on-primary rounded-full p-3 md:p-4 hover:scale-110 transition-transform cursor-pointer active:scale-90 shadow-2xl" title="WhatsApp Support">
+<span class="material-symbols-outlined text-lg md:text-2xl">chat</span>
+</div>
+<div class="bg-primary text-on-primary rounded-full p-3 md:p-4 hover:scale-110 transition-transform cursor-pointer active:scale-90 shadow-2xl" title="Get a Quote">
+<span class="material-symbols-outlined text-lg md:text-2xl">request_quote</span>
+</div>
+<div class="bg-primary text-on-primary rounded-full p-3 md:p-4 animate-pulse hover:scale-110 transition-transform cursor-pointer active:scale-90 shadow-2xl" title="Book Call">
+<span class="material-symbols-outlined text-lg md:text-2xl">phone_in_talk</span>
+</div>
+</div>
+<!-- Footer -->
+<footer class="w-full relative clip-path-diagonal-inverse bg-neutral-950 mt-[-60px] pt-44" id="about">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 px-8 md:px-12 py-20 w-full max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<img alt="Maznex Logo" class="h-10 w-auto" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+<div class="text-xl font-bold text-white uppercase tracking-tighter">Maznex</div>
+</div>
+<p class="font-manrope text-sm leading-relaxed text-white/40 max-w-xs">
+                    Sovereign authority in finance and recruitment. Delivering precision and expertise globally since 2014.
+                </p>
+<div class="text-xs text-primary/60 font-mono">
+                    Co. Number: 17104796
+                </div>
+</div>
+<div>
+<h4 class="text-primary font-bold text-xs uppercase tracking-widest mb-6">Expertise</h4>
+<ul class="space-y-4 font-manrope text-sm">
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/services">Services</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/recruitment">Recruitment</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/services">Tax Advisory</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-bold text-xs uppercase tracking-widest mb-6">Global Reach</h4>
+<ul class="space-y-4 font-manrope text-sm">
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/contact">Offices</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/recruitment">Network</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/#team">Careers</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-primary font-bold text-xs uppercase tracking-widest mb-6">Legal</h4>
+<ul class="space-y-4 font-manrope text-sm">
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/contact">Terms &amp; Conditions</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/contact">Privacy Policy</a></li>
+<li><a class="text-white/40 hover:text-primary transition-colors" href="/contact">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+<div class="px-8 md:px-12 py-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 max-w-7xl mx-auto">
+<p class="font-manrope text-[10px] md:text-sm leading-relaxed text-white/20 text-center md:text-left">© 2024 Maznex Enterprises Ltd. Registered in England &amp; Wales. Sovereign Authority in Finance &amp; Recruitment.</p>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-white/20 cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined text-white/20 cursor-pointer hover:text-primary transition-colors">public</span>
+</div>
+</div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+<script src="/entry-popup.js"></script>
+</body></html>

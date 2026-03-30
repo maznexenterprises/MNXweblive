@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | Maznex Enterprises Ltd.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface": "#ffffff",
+              "on-background": "#1A1A1A",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "tertiary": "#795900",
+              "secondary-container": "#f0eded",
+              "secondary": "#1A1A1A",
+              "surface-container": "#f0eded",
+              "on-primary": "#ffffff",
+              "tertiary-container": "#C9A84C",
+              "on-secondary-fixed-variant": "#1A1A1A",
+              "surface-container-high": "#eae7e7",
+              "primary-fixed-dim": "#C9A84C",
+              "inverse-primary": "#C9A84C",
+              "tertiary-fixed": "#ffdfa0",
+              "surface-dim": "#dcd9d9",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#4d4637",
+              "background": "#ffffff",
+              "on-primary-container": "#1A1A1A",
+              "primary": "#C9A84C",
+              "surface-container-highest": "#e5e2e1",
+              "secondary-fixed-dim": "#acc7ff",
+              "surface-tint": "#C9A84C",
+              "error-container": "#ffdad6",
+              "inverse-surface": "#1A1A1A",
+              "primary-fixed": "#ffe08f",
+              "outline": "#7e7665",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-variant": "#e5e2e1",
+              "surface-container-low": "#f6f3f2",
+              "on-secondary-fixed": "#1A1A1A",
+              "on-tertiary-fixed": "#261a00",
+              "on-primary-fixed": "#241a00",
+              "outline-variant": "#d0c5b2",
+              "on-primary-fixed-variant": "#584400",
+              "on-secondary-container": "#1A1A1A",
+              "surface-bright": "#ffffff",
+              "on-surface": "#1A1A1A",
+              "tertiary-fixed-dim": "#ecc165",
+              "primary-container": "#C9A84C",
+              "on-tertiary-container": "#533c00",
+              "secondary-fixed": "#d7e2ff",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "on-secondary": "#ffffff",
+              "error": "#ba1a1a"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .clip-path-diagonal {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+        .clip-path-diagonal-inverse {
+            clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+        }
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: rotate(30deg);
+            animation: shimmer 4s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(30deg); }
+            100% { transform: translateX(100%) rotate(30deg); }
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .expand-icon {
+            transform: rotate(180deg);
+        }
+        .diagonal-clip-path {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<!-- Main Content -->
+<main class="pt-20 min-h-screen">
+<!-- Hero Section -->
+<header class="relative overflow-hidden bg-[#1A1A1A] py-32 px-8 flex flex-col items-center justify-center text-center">
+<div class="absolute inset-0 z-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="high-end corporate skyscraper architecture with clean geometric lines and golden sunset reflections on glass facade" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto">
+<span class="label-md font-bold text-[#C9A84C] tracking-[0.3em] uppercase mb-6 block">Global Authority</span>
+<h1 class="text-white font-headline font-extrabold text-5xl md:text-7xl tracking-tighter leading-none mb-8">Get in Touch</h1>
+<p class="text-white/70 text-lg md:text-xl max-w-2xl mx-auto font-body leading-relaxed">
+                Connecting global talent with sovereign financial expertise. Reach out to our regional architects to discuss your firm's future.
+            </p>
+</div>
+<!-- Asymmetric Accent -->
+<div class="absolute bottom-0 right-0 w-1/4 h-2 bg-[#C9A84C]"></div>
+</header>
+<!-- Global Office Grid -->
+<section class="py-24 px-8 max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline font-bold text-3xl md:text-4xl text-[#1A1A1A] tracking-tight">Our Global Footprint</h2>
+<p class="text-on-surface-variant mt-4">Strategically positioned in the world's most vital financial hubs to serve you better.</p>
+</div>
+<div class="h-1 w-24 bg-[#C9A84C]"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- London -->
+<div class="bg-surface-container-low p-8 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-xl group relative overflow-hidden border border-neutral-100">
+<div class="mb-6 h-48 w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="minimalist architectural map of London city center with clean golden lines and major landmarks highlighted" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231B3A6B"/><circle cx="200" cy="150" r="100" fill="none" stroke="%23C9A84C" stroke-width="2"/><line x1="100" y1="150" x2="300" y2="150" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><line x1="200" y1="50" x2="200" y2="250" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><text x="200" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="%23C9A84C">Global Network</text></svg>"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-[#1A1A1A] mb-2">London (UK)</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body leading-relaxed">Level 42, 122 Leadenhall St,<br/>London EC3V 4AB</p>
+<div class="space-y-3">
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="mailto:london@maznex.com">
+<span class="material-symbols-outlined text-base">mail</span>
+                        london@maznex.com
+                    </a>
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="tel:+442079460000">
+<span class="material-symbols-outlined text-base">phone</span>
+                        +44 20 7946 0000
+                    </a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-[#C9A84C] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</div>
+<!-- Dubai -->
+<div class="bg-surface-container-low p-8 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-xl group relative overflow-hidden border border-neutral-100">
+<div class="mb-6 h-48 w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="stylized satellite view of Dubai International Financial Centre with prominent architectural outlines in gold" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-[#1A1A1A] mb-2">Dubai (UAE)</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body leading-relaxed">The Index Tower, DIFC,<br/>Dubai</p>
+<div class="space-y-3">
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="mailto:dubai@maznex.com">
+<span class="material-symbols-outlined text-base">mail</span>
+                        dubai@maznex.com
+                    </a>
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="tel:+97143620000">
+<span class="material-symbols-outlined text-base">phone</span>
+                        +971 4 362 0000
+                    </a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-[#C9A84C] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</div>
+<!-- Singapore -->
+<div class="bg-surface-container-low p-8 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-xl group relative overflow-hidden border border-neutral-100">
+<div class="mb-6 h-48 w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="modern tech-oriented map of Marina Bay Financial Centre Singapore with vibrant navy and gold details" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231B3A6B"/><circle cx="200" cy="150" r="100" fill="none" stroke="%23C9A84C" stroke-width="2"/><line x1="100" y1="150" x2="300" y2="150" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><line x1="200" y1="50" x2="200" y2="250" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><text x="200" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="%23C9A84C">Global Network</text></svg>"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-[#1A1A1A] mb-2">Singapore (SG)</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body leading-relaxed">8 Marina Blvd, Marina Bay Financial Centre, Singapore 018981</p>
+<div class="space-y-3">
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="mailto:sg@maznex.com">
+<span class="material-symbols-outlined text-base">mail</span>
+                        sg@maznex.com
+                    </a>
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="tel:+6568290000">
+<span class="material-symbols-outlined text-base">phone</span>
+                        +65 6829 0000
+                    </a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-[#C9A84C] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</div>
+<!-- New York -->
+<div class="bg-surface-container-low p-8 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-xl group relative overflow-hidden border border-neutral-100">
+<div class="mb-6 h-48 w-full rounded-lg overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-500">
+<img class="w-full h-full object-cover" data-alt="metropolitan map of New York City's Park Avenue area with architectural depth and golden transit lines" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231B3A6B"/><circle cx="200" cy="150" r="100" fill="none" stroke="%23C9A84C" stroke-width="2"/><line x1="100" y1="150" x2="300" y2="150" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><line x1="200" y1="50" x2="200" y2="250" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><text x="200" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="%23C9A84C">Global Network</text></svg>"/>
+</div>
+<h3 class="font-headline font-bold text-xl text-[#1A1A1A] mb-2">New York (USA)</h3>
+<p class="text-sm text-on-surface-variant mb-6 font-body leading-relaxed">200 Park Ave, MetLife Building,<br/>New York, NY 10166</p>
+<div class="space-y-3">
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="mailto:nyc@maznex.com">
+<span class="material-symbols-outlined text-base">mail</span>
+                        nyc@maznex.com
+                    </a>
+<a class="flex items-center gap-2 text-sm text-[#1A1A1A] hover:text-[#C9A84C] transition-colors" href="tel:+12128080000">
+<span class="material-symbols-outlined text-base">phone</span>
+                        +1 212 808 0000
+                    </a>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-1 bg-[#C9A84C] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+</div>
+</div>
+</section>
+<!-- Diagonal Divider -->
+<div class="w-full h-32 bg-surface-dim clip-path-diagonal -mt-16"></div>
+<!-- Form & Concierge Section -->
+<section class="bg-surface-dim py-24 px-8">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Send a Message Form -->
+<div class="lg:col-span-8 bg-white p-10 rounded-xl shadow-2xl shadow-primary/5 border-l-4 border-[#C9A84C]">
+<h2 class="font-headline font-bold text-3xl mb-8 text-[#1A1A1A]">Send a Message</h2>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-0 focus:border-l-4 focus:border-[#C9A84C] transition-all placeholder:text-outline/50" placeholder="Alexander Maznex" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Work Email</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-0 focus:border-l-4 focus:border-[#C9A84C] transition-all placeholder:text-outline/50" placeholder="alex@company.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Company Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-0 focus:border-l-4 focus:border-[#C9A84C] transition-all placeholder:text-outline/50" placeholder="Enterprise Group" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Enquiry Type</label>
+<select class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-0 focus:border-l-4 focus:border-[#C9A84C] transition-all text-on-surface appearance-none">
+<option>Financial Services</option>
+<option>Recruitment - Employer</option>
+<option>Recruitment - Candidate</option>
+<option>Partnership</option>
+<option>Other</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-1">Message</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg p-4 focus:ring-0 focus:border-l-4 focus:border-[#C9A84C] transition-all placeholder:text-outline/50" placeholder="How can our global experts assist you?" rows="4"></textarea>
+</div>
+<button class="shimmer-btn bg-gradient-to-r from-[#1A1A1A] to-[#C9A84C] text-white w-full py-5 rounded-lg font-headline font-bold text-lg uppercase tracking-widest shadow-xl shadow-[#C9A84C]/20 active:scale-95 transition-all" type="submit">
+                        Initialize Inquiry
+                    </button>
+</form>
+</div>
+<!-- Direct Concierge Sidebar -->
+<div class="lg:col-span-4 space-y-10">
+<div>
+<h3 class="font-headline font-extrabold text-2xl text-[#1A1A1A] mb-2">Global Concierge</h3>
+<p class="text-on-surface-variant font-body">Direct access to our dedicated support channels.</p>
+</div>
+<div class="space-y-4">
+<!-- WhatsApp Support -->
+<div class="group bg-surface-container p-6 rounded-xl hover:bg-green-50 transition-colors cursor-pointer border-l-2 border-transparent hover:border-green-500">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-green-500 text-white p-3 rounded-full group-hover:animate-pulse">
+<span class="material-symbols-outlined block">chat</span>
+</div>
+<div>
+<h4 class="font-bold text-[#1A1A1A]">WhatsApp Support</h4>
+<p class="text-xs text-on-surface-variant">Instant Global Response</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-green-500 opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+</div>
+</div>
+<!-- Book Consultation -->
+<div class="group bg-surface-container p-6 rounded-xl hover:bg-[#C9A84C]/10 transition-colors cursor-pointer border-l-2 border-transparent hover:border-[#C9A84C]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-[#1A1A1A] text-white p-3 rounded-full group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined block">phone_in_talk</span>
+</div>
+<div>
+<h4 class="font-bold text-[#1A1A1A]">Book a Consultation</h4>
+<p class="text-xs text-on-surface-variant">30-min Strategic Call</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity">event</span>
+</div>
+</div>
+<!-- Client Login -->
+<div class="group bg-surface-container p-6 rounded-xl hover:bg-[#C9A84C]/10 transition-colors cursor-pointer border-l-2 border-transparent hover:border-[#C9A84C]">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-[#C9A84C] text-white p-3 rounded-full">
+<span class="material-symbols-outlined block">lock</span>
+</div>
+<div>
+<h4 class="font-bold text-[#1A1A1A]">Client Login</h4>
+<p class="text-xs text-on-surface-variant">Secure Authority Portal</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity">login</span>
+</div>
+</div>
+</div>
+<!-- Side Card -->
+<div class="bg-[#1A1A1A] p-8 rounded-xl text-white relative overflow-hidden">
+<div class="relative z-10">
+<span class="text-[#C9A84C] text-xs font-bold uppercase tracking-widest mb-4 block">Recruitment Center</span>
+<h4 class="text-xl font-bold mb-4">Elite Career Placement</h4>
+<p class="text-white/60 text-sm mb-6">Our talent architects are ready to evaluate your professional trajectory.</p>
+<a class="text-white font-bold text-sm underline decoration-[#C9A84C] underline-offset-4 hover:text-[#C9A84C] transition-colors" href="/candidate-portal">Join the Network</a>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl text-white/5 pointer-events-none">groups</span>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-[#1A1A1A] py-24 px-8 relative overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-[#C9A84C]/5 -skew-x-12 transform translate-x-1/2"></div>
+<div class="max-w-4xl mx-auto relative z-10">
+<div class="text-center mb-16">
+<span class="text-[#C9A84C] text-xs font-bold uppercase tracking-[0.4em] mb-4 block">Information Bureau</span>
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl text-white tracking-tight mb-6">Frequently Asked Questions</h2>
+<div class="h-1 w-24 bg-[#C9A84C] mx-auto"></div>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<details class="group bg-neutral-800/50 border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-neutral-800 transition-colors">
+<h3 class="font-headline font-bold text-lg text-white pr-8">What are your core financial service areas?</h3>
+<span class="material-symbols-outlined text-[#C9A84C] expand-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-neutral-400 font-body leading-relaxed">
+                        Maznex specializes in sovereign wealth management, cross-border investment architecture, and elite corporate financial restructuring. Our experts operate at the intersection of high-growth markets and established financial hubs.
+                    </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-neutral-800/50 border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-neutral-800 transition-colors">
+<h3 class="font-headline font-bold text-lg text-white pr-8">How does the recruitment fee structure work?</h3>
+<span class="material-symbols-outlined text-[#C9A84C] expand-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-neutral-400 font-body leading-relaxed">
+                        Our executive search services operate on a premium retained model, ensuring dedicated resources for sourcing the top 1% of global talent. Performance-based incentives are structured according to the seniority and strategic impact of the placement.
+                    </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-neutral-800/50 border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-neutral-800 transition-colors">
+<h3 class="font-headline font-bold text-lg text-white pr-8">Do you provide multi-currency billing?</h3>
+<span class="material-symbols-outlined text-[#C9A84C] expand-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-neutral-400 font-body leading-relaxed">
+                        Yes. As a global authority, we facilitate billing and settlements in all major reserve currencies (USD, EUR, GBP, AED, SGD) to provide seamless financial integration for our international clientele.
+                    </div>
+</details>
+<!-- FAQ 4 -->
+<details class="group bg-neutral-800/50 border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-neutral-800 transition-colors">
+<h3 class="font-headline font-bold text-lg text-white pr-8">How can I book a 1-on-1 consultation with a partner?</h3>
+<span class="material-symbols-outlined text-[#C9A84C] expand-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-neutral-400 font-body leading-relaxed">
+                        Qualified inquiries can request a strategic brief through our "Book a Free Call" portal. Upon vetting, you will be assigned a Regional Partner based on your geographic requirements and service vertical.
+                    </div>
+</details>
+<!-- FAQ 5 -->
+<details class="group bg-neutral-800/50 border border-white/5 rounded-xl overflow-hidden transition-all duration-300">
+<summary class="flex items-center justify-between p-6 cursor-pointer hover:bg-neutral-800 transition-colors">
+<h3 class="font-headline font-bold text-lg text-white pr-8">What global compliance standards do you follow?</h3>
+<span class="material-symbols-outlined text-[#C9A84C] expand-icon transition-transform duration-300">expand_more</span>
+</summary>
+<div class="px-6 pb-6 text-neutral-400 font-body leading-relaxed">
+                        We adhere to the highest international standards, including FATF guidelines, GDPR for data integrity, and specific regional regulatory requirements in all jurisdictions we operate in (FCA, DFSA, MAS).
+                    </div>
+</details>
+</div>
+<div class="mt-16 text-center">
+<p class="text-neutral-500 text-sm italic">Didn't find what you were looking for? <a class="text-[#C9A84C] font-bold hover:underline" href="/contact">Speak with our Concierge.</a></p>
+</div>
+</div>
+</section>
+</main>
+<!-- SideNavBar (Customized based on COMPONENT_40) -->
+<div class="fixed bottom-8 right-8 z-50 flex flex-col space-y-4 items-end bg-transparent">
+<div class="group flex items-center bg-white shadow-2xl rounded-full pr-6 py-2 overflow-hidden hover:pr-8 transition-all cursor-pointer border border-neutral-100">
+<div class="bg-green-500 text-white rounded-full p-4 animate-pulse">
+<span class="material-symbols-outlined block">chat</span>
+</div>
+<span class="ml-4 font-manrope font-extrabold text-sm text-[#1A1A1A]">WhatsApp Support</span>
+</div>
+<div class="bg-[#C9A84C] text-white rounded-full p-4 shadow-lg hover:scale-110 transition-transform cursor-pointer">
+<span class="material-symbols-outlined block">request_quote</span>
+</div>
+</div>
+<!-- Footer (Based on COMPONENT_40) -->
+<footer class="bg-[#1A1A1A] w-full relative clip-path-diagonal-inverse">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full py-20 px-12 pt-32">
+<div class="col-span-1">
+<div class="flex items-center gap-3 mb-6">
+<img alt="Maznex Logo" class="h-8 w-auto mix-blend-screen" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+<span class="text-xl font-bold text-white font-headline">Maznex</span>
+</div>
+<p class="font-inter text-xs uppercase tracking-widest text-neutral-400 leading-relaxed max-w-xs">
+                The Sovereign Authority in Finance &amp; Recruitment. Orchestrating global excellence from four strategic hubs.
+            </p>
+</div>
+<div>
+<h5 class="text-[#C9A84C] font-bold text-xs uppercase tracking-widest mb-6">Enterprise</h5>
+<ul class="space-y-4">
+<li><a class="font-inter text-xs uppercase tracking-widest text-neutral-500 hover:text-[#C9A84C] transition-colors" href="/services">Global Compliance</a></li>
+<li><a class="font-inter text-xs uppercase tracking-widest text-neutral-500 hover:text-[#C9A84C] transition-colors" href="/contact">Office Locations</a></li>
+<li><a class="font-inter text-xs uppercase tracking-widest text-neutral-500 hover:text-[#C9A84C] transition-colors" href="/contact">Regulatory Disclosures</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-[#C9A84C] font-bold text-xs uppercase tracking-widest mb-6">Connect</h5>
+<div class="flex space-x-4">
+<span class="material-symbols-outlined text-white opacity-80 hover:text-[#C9A84C] cursor-pointer transition-colors">share</span>
+<span class="material-symbols-outlined text-white opacity-80 hover:text-[#C9A84C] cursor-pointer transition-colors">public</span>
+<span class="material-symbols-outlined text-white opacity-80 hover:text-[#C9A84C] cursor-pointer transition-colors">mail</span>
+</div>
+<div class="mt-8">
+<a class="font-inter text-xs uppercase tracking-widest text-neutral-500 hover:text-white block mb-2" href="/contact">Privacy Policy</a>
+<a class="font-inter text-xs uppercase tracking-widest text-neutral-500 hover:text-white block" href="/contact">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="px-12 py-8 border-t border-white/5 text-center">
+<p class="font-inter text-xs uppercase tracking-widest text-neutral-500">© 2024 Maznex Global. All Rights Reserved.</p>
+</div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+// ── Wire contact form to Maznex backend ──────────────────────────
+const API = 'https://maznex-backend.vercel.app';
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('form');
+  if (!form) return;
+  form.id = 'contact-form';
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const btn = form.querySelector('button[type="submit"], button');
+    const originalText = btn ? btn.textContent : '';
+    if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
+
+    // Collect all named inputs
+    const inputs = form.querySelectorAll('input, textarea, select');
+    const data = {};
+    inputs.forEach(input => {
+      if (input.name || input.placeholder) {
+        const key = input.name || input.placeholder.toLowerCase().replace(/[^a-z]/g,'_');
+        data[key] = input.value;
+      }
+    });
+
+    // Map common field names
+    const payload = {
+      name:    data.name || data.full_name || data.your_name || '',
+      email:   data.email || data.your_email || '',
+      phone:   data.phone || data.telephone || '',
+      company: data.company || data.organisation || '',
+      message: data.message || data.your_message || data.how_can_our_global_experts_assist_you_ || '',
+      subject: data.subject || 'Website Enquiry'
+    };
+
+    try {
+      const res = await fetch(`${API}/api/contact/send`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        // Show success message
+        form.innerHTML = `
+          <div style="text-align:center;padding:48px 24px;">
+            <div style="font-size:48px;margin-bottom:16px;">✅</div>
+            <h3 style="color:#C9A84C;font-size:24px;font-weight:800;margin-bottom:8px;">Message Sent!</h3>
+            <p style="color:#888;font-size:14px;">Thank you for reaching out. We will be in touch within 1 business day.</p>
+            <p style="color:#888;font-size:13px;margin-top:8px;">Or reach us directly on
+              <a href="https://wa.me/447424748791" style="color:#C9A84C;">WhatsApp</a>
+            </p>
+          </div>`;
+      } else {
+        throw new Error(result.error || 'Failed to send');
+      }
+    } catch (err) {
+      if (btn) { btn.textContent = originalText; btn.disabled = false; }
+      alert('Could not send message: ' + err.message + '\nPlease WhatsApp us at +44 7424 748791');
+    }
+  });
+});
+</script>
+<script src="/entry-popup.js"></script>
+</body></html>

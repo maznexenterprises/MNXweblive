@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Maznex Enterprises | Admin Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#eae7e7",
+              "primary": "#755b00",
+              "surface-container": "#f0eded",
+              "background": "#fcf9f8",
+              "surface-dim": "#dcd9d9",
+              "on-surface-variant": "#4d4637",
+              "secondary-fixed": "#d7e2ff",
+              "on-secondary-fixed-variant": "#294678",
+              "inverse-surface": "#313030",
+              "error-container": "#ffdad6",
+              "tertiary": "#795900",
+              "inverse-on-surface": "#f3f0ef",
+              "surface-container-low": "#f6f3f2",
+              "surface": "#fcf9f8",
+              "secondary-fixed-dim": "#acc7ff",
+              "on-primary-container": "#503d00",
+              "on-tertiary-fixed": "#261a00",
+              "on-error": "#ffffff",
+              "primary-fixed": "#ffe08f",
+              "outline": "#7e7665",
+              "secondary": "#425e91",
+              "inverse-primary": "#e6c364",
+              "tertiary-fixed": "#ffdfa0",
+              "on-secondary": "#ffffff",
+              "tertiary-container": "#cea64e",
+              "on-primary": "#ffffff",
+              "tertiary-fixed-dim": "#ecc165",
+              "surface-bright": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "error": "#ba1a1a",
+              "surface-tint": "#755b00",
+              "on-error-container": "#93000a",
+              "primary-fixed-dim": "#e6c364",
+              "on-primary-fixed": "#241a00",
+              "on-tertiary-container": "#533c00",
+              "on-primary-fixed-variant": "#584400",
+              "primary-container": "#c9a84c",
+              "on-surface": "#1c1b1b",
+              "outline-variant": "#d0c5b2",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e5e2e1",
+              "on-background": "#1c1b1b",
+              "secondary-container": "#a8c4fe",
+              "on-secondary-fixed": "#001a40",
+              "on-secondary-container": "#345083",
+              "surface-variant": "#e5e2e1"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .diagonal-divider {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      }
+      .shimmer-btn {
+        background: linear-gradient(90deg, #755b00 0%, #c9a84c 50%, #755b00 100%);
+        background-size: 200% auto;
+      }
+      .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: #f0eded; }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 10px; }
+      .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+      }
+      @media (max-width: 1024px) {
+        .mobile-sidebar-hidden { display: none; }
+      }
+    </style>
+</head>
+<body class="bg-background font-body text-on-background custom-scrollbar">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<div class="flex pt-20">
+<!-- SideNavBar -->
+<aside class="h-[calc(100vh-80px)] w-64 fixed left-0 top-20 bg-stone-50 border-r border-stone-200/50 flex flex-col py-8 z-40 transition-transform duration-300 lg:translate-x-0 -translate-x-full" id="sidebar">
+<div class="px-6 mb-10 text-center">
+<img alt="Maznex Enterprises" class="h-20 w-auto object-contain mx-auto" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-4 px-6 py-3 text-stone-500 hover:pl-8 hover:bg-stone-100 transition-all group" href="/admin">
+<span class="material-symbols-outlined group-hover:text-yellow-600" data-icon="dashboard">dashboard</span>
+<span class="font-headline text-xs font-semibold uppercase tracking-widest">Dashboard</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-stone-500 hover:pl-8 hover:bg-stone-100 transition-all group" href="/admin">
+<span class="material-symbols-outlined group-hover:text-yellow-600" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="font-headline text-xs font-semibold uppercase tracking-widest">Assets</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-yellow-700 font-bold border-l-4 border-yellow-600 pl-4 bg-yellow-50/50" href="/admin">
+<span class="material-symbols-outlined" data-icon="gavel">gavel</span>
+<span class="font-headline text-xs font-semibold uppercase tracking-widest">Compliance</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-stone-500 hover:pl-8 hover:bg-stone-100 transition-all group" href="/admin">
+<span class="material-symbols-outlined group-hover:text-yellow-600" data-icon="psychology">psychology</span>
+<span class="font-headline text-xs font-semibold uppercase tracking-widest">Advisory</span>
+</a>
+<a class="flex items-center gap-4 px-6 py-3 text-stone-500 hover:pl-8 hover:bg-stone-100 transition-all group" href="/admin">
+<span class="material-symbols-outlined group-hover:text-yellow-600" data-icon="inventory_2">inventory_2</span>
+<span class="font-headline text-xs font-semibold uppercase tracking-widest">Archives</span>
+</a>
+</nav>
+<div class="px-6 mt-auto space-y-4">
+<button class="w-full shimmer-btn text-on-primary py-3 rounded font-headline text-[10px] font-bold uppercase tracking-widest shadow-lg shadow-primary/20">New Report</button>
+<div class="pt-4 border-t border-stone-200">
+<a class="flex items-center gap-4 py-2 text-stone-500 hover:text-primary transition-colors" href="/admin">
+<span class="material-symbols-outlined text-sm" data-icon="help_outline">help_outline</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Support</span>
+</a>
+<a class="flex items-center gap-4 py-2 text-stone-500 hover:text-red-600 transition-colors" href="/login">
+<span class="material-symbols-outlined text-sm" data-icon="logout">logout</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Logout</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-0 lg:ml-64 p-4 md:p-8 bg-background min-h-screen">
+<!-- Header Section -->
+<header class="mb-8 relative overflow-hidden bg-stone-900 p-8 md:p-12 rounded-xl text-white shadow-2xl">
+<div class="absolute top-0 right-0 w-1/3 h-full bg-primary/10 -skew-x-12 transform translate-x-1/4"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-2 mb-2 text-yellow-500">
+<span class="material-symbols-outlined text-sm">auto_graph</span>
+<span class="text-[10px] font-bold uppercase tracking-[0.2em]">Fiscal Intelligence</span>
+</div>
+<h1 class="text-2xl md:text-4xl font-headline font-extrabold tracking-tight mb-2">Executive Overview</h1>
+<p class="text-stone-400 max-w-2xl font-body text-sm md:text-base leading-relaxed">
+                    Comprehensive financial health and recruitment analytics for the fiscal quarter. Visualizing sovereign capital flows and human resource velocity with real-time accuracy.
+                </p>
+</div>
+</header>
+<!-- KPI Grid - QuickBooks Style Insights -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-stone-200/50 hover:shadow-md transition-all">
+<div class="flex justify-between items-center mb-6">
+<div class="p-3 bg-yellow-50 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="text-green-600 text-xs font-bold bg-green-50 px-2 py-1 rounded-md border border-green-100">+12.4%</span>
+<span class="text-[9px] text-stone-400 font-bold uppercase mt-1">Vs Last Month</span>
+</div>
+</div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Total Revenue</p>
+<h3 class="text-2xl md:text-3xl font-headline font-extrabold text-stone-900">$4,829,000,000</h3>
+<div class="mt-4 pt-4 border-t border-stone-100 flex justify-between items-center">
+<span class="text-[10px] text-stone-500 font-medium">Auto-synced: 2m ago</span>
+<span class="material-symbols-outlined text-sm text-stone-300">info</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-stone-200/50 hover:shadow-md transition-all">
+<div class="flex justify-between items-center mb-6">
+<div class="p-3 bg-stone-100 rounded-lg text-secondary">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</div>
+<div class="text-right">
+<span class="text-stone-600 text-[10px] font-bold bg-stone-100 px-2 py-1 rounded-md">Target: $1.2B</span>
+</div>
+</div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Global Spend</p>
+<h3 class="text-2xl md:text-3xl font-headline font-extrabold text-stone-900">$842,500,200</h3>
+<div class="mt-4 w-full h-1.5 bg-stone-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[70%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm border border-stone-200/50 hover:shadow-md transition-all md:col-span-2 lg:col-span-1">
+<div class="flex justify-between items-center mb-6">
+<div class="p-3 bg-yellow-50 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<span class="text-yellow-700 text-[10px] font-bold bg-yellow-100 px-2 py-1 rounded-md">98% Retention</span>
+</div>
+<p class="text-[10px] font-bold text-stone-400 uppercase tracking-widest mb-1">Recruitment Success</p>
+<h3 class="text-2xl md:text-3xl font-headline font-extrabold text-stone-900">94.2%</h3>
+<div class="mt-4 flex gap-1">
+<div class="h-1 flex-1 bg-primary rounded-full"></div>
+<div class="h-1 flex-1 bg-primary rounded-full"></div>
+<div class="h-1 flex-1 bg-primary rounded-full"></div>
+<div class="h-1 flex-1 bg-stone-200 rounded-full"></div>
+</div>
+</div>
+</section>
+<!-- Bento Analytics Grid -->
+<div class="bento-grid mb-8">
+<!-- Revenue Trend -->
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-stone-200/50 relative overflow-hidden h-[400px]">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div>
+<h4 class="text-lg md:text-xl font-headline font-bold text-stone-900">Monthly Revenue Trend</h4>
+<p class="text-[10px] text-stone-400 tracking-wider uppercase font-bold">Consolidated Enterprise Data</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-[9px] font-bold uppercase text-stone-500">Realized</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-stone-300"></span>
+<span class="text-[9px] font-bold uppercase text-stone-500">Projected</span>
+</div>
+</div>
+</div>
+<div class="relative w-full h-64 mt-4">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 800 200">
+<defs>
+<lineargradient id="grad-gold-chart" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#755b00;stop-opacity:0.15"></stop>
+<stop offset="100%" style="stop-color:#755b00;stop-opacity:0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,150 Q100,120 200,160 T400,80 T600,100 T800,40 L800,200 L0,200 Z" fill="url(#grad-gold-chart)"></path>
+<path d="M0,150 Q100,120 200,160 T400,80 T600,100 T800,40" fill="none" stroke="#755b00" stroke-width="3"></path>
+<circle cx="200" cy="160" fill="#755b00" r="4"></circle>
+<circle cx="400" cy="80" fill="#755b00" r="4"></circle>
+<circle cx="800" cy="40" fill="#755b00" r="4"></circle>
+</svg>
+<div class="flex justify-between mt-6 px-2 text-[9px] font-bold text-stone-400 uppercase tracking-tighter">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span>
+</div>
+</div>
+</div>
+<!-- Recruitment Funnel -->
+<div class="col-span-12 lg:col-span-4 bg-stone-900 p-8 rounded-xl shadow-xl text-white">
+<h4 class="text-xl font-headline font-bold mb-8">Pipeline Velocity</h4>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest text-stone-400">Applicants (2.4k)</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-white w-full"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest text-stone-400">Shortlisted (840)</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-yellow-500/60 w-[70%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest text-stone-400">Interviewed (120)</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-yellow-500 w-[35%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between mb-2 text-[10px] font-bold uppercase tracking-widest text-stone-400">Contracted (42)</div>
+<div class="w-full h-2 bg-white/5 rounded-full overflow-hidden">
+<div class="h-full bg-white w-[15%]"></div>
+</div>
+</div>
+</div>
+<div class="mt-12 p-4 bg-white/5 border border-white/10 rounded-lg">
+<p class="text-xs font-body italic text-stone-300 leading-relaxed">"Optimal conversion achieved through targeted AI-driven screening protocols."</p>
+</div>
+</div>
+<!-- Global Map Section -->
+<div class="col-span-12 bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-sm border border-stone-200/50">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+<div>
+<h4 class="text-xl font-headline font-bold text-stone-900">Regional Capital Deployment</h4>
+<p class="text-[10px] text-stone-400 tracking-wider uppercase font-bold">Live Asset Distribution Map</p>
+</div>
+<button class="text-primary text-[10px] font-bold uppercase flex items-center gap-2 px-4 py-2 bg-yellow-50 rounded-lg hover:bg-yellow-100 transition-all border border-yellow-200">
+                        Export Regional Data <span class="material-symbols-outlined text-sm" data-icon="download">download</span>
+</button>
+</div>
+<div class="w-full h-[400px] md:h-[500px] bg-stone-50 rounded-xl relative overflow-hidden border border-stone-100">
+<img alt="Global Network Map" class="w-full h-full object-cover grayscale opacity-80" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300"><rect width="400" height="300" fill="%231B3A6B"/><circle cx="200" cy="150" r="100" fill="none" stroke="%23C9A84C" stroke-width="2"/><line x1="100" y1="150" x2="300" y2="150" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><line x1="200" y1="50" x2="200" y2="250" stroke="%23C9A84C" stroke-width="1" stroke-dasharray="5"/><text x="200" y="160" text-anchor="middle" font-family="Arial" font-size="14" fill="%23C9A84C">Global Network</text></svg>"/>
+<div class="absolute inset-0 bg-gradient-to-t from-stone-900/10 to-transparent"></div>
+<!-- Map UI Overlays -->
+<div class="absolute top-6 left-6 bg-white/95 backdrop-blur-sm p-5 rounded-xl shadow-2xl border border-stone-100 max-w-[200px]">
+<div class="flex items-center gap-3 mb-4">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></span>
+<span class="text-[10px] font-black uppercase tracking-widest text-stone-900">Live Hubs</span>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end border-b border-stone-100 pb-1">
+<span class="text-[9px] text-stone-400 font-bold uppercase">EMEA</span>
+<span class="text-xs font-bold text-stone-900">$1.4T</span>
+</div>
+<div class="flex justify-between items-end border-b border-stone-100 pb-1">
+<span class="text-[9px] text-stone-400 font-bold uppercase">Americas</span>
+<span class="text-xs font-bold text-stone-900">$2.1T</span>
+</div>
+<div class="flex justify-between items-end">
+<span class="text-[9px] text-stone-400 font-bold uppercase">APAC</span>
+<span class="text-xs font-bold text-stone-900">$1.3T</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Activity Log - QuickBooks Style Table -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm border border-stone-200/50 overflow-hidden mb-8">
+<div class="p-6 md:p-8 flex justify-between items-center border-b border-stone-100 bg-stone-50/30">
+<div>
+<h4 class="text-xl font-headline font-bold text-stone-900">Activity Ledger</h4>
+<p class="text-[10px] text-stone-400 tracking-wider uppercase font-bold">Recent System Transactions</p>
+</div>
+<div class="flex gap-2">
+<button class="p-2 hover:bg-white rounded border border-stone-200 text-stone-400 transition-all">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+</button>
+<button class="p-2 hover:bg-white rounded border border-stone-200 text-stone-400 transition-all">
+<span class="material-symbols-outlined text-lg">print</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-stone-50 text-[10px] font-black uppercase tracking-widest text-stone-500 border-b border-stone-100">
+<tr>
+<th class="px-8 py-4">Reference No.</th>
+<th class="px-8 py-4">Counterparty</th>
+<th class="px-8 py-4">Asset Class</th>
+<th class="px-8 py-4">Value (USD)</th>
+<th class="px-8 py-4">Status</th>
+<th class="px-8 py-4 text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-100">
+<tr class="hover:bg-stone-50/50 transition-colors group">
+<td class="px-8 py-5 font-mono text-xs text-stone-500">#TXN-90210</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-stone-900 flex items-center justify-center text-[10px] font-bold text-white">BN</div>
+<span class="text-sm font-semibold text-stone-900">Baring North Ltd.</span>
+</div>
+</td>
+<td class="px-8 py-5 text-xs text-stone-500">Private Equity</td>
+<td class="px-8 py-5 font-headline font-bold text-sm text-stone-900">$12,500,000</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-green-50 text-green-700 text-[9px] font-black uppercase rounded-md border border-green-100">Settled</span>
+</td>
+<td class="px-8 py-5 text-center">
+<button class="text-stone-300 hover:text-stone-900 transition-colors"><span class="material-symbols-outlined text-xl">more_horiz</span></button>
+</td>
+</tr>
+<tr class="hover:bg-stone-50/50 transition-colors group">
+<td class="px-8 py-5 font-mono text-xs text-stone-500">#TXN-90211</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-yellow-500/10 flex items-center justify-center text-[10px] font-bold text-primary">SC</div>
+<span class="text-sm font-semibold text-stone-900">Sovereign Cloud</span>
+</div>
+</td>
+<td class="px-8 py-5 text-xs text-stone-500">Infrastructure</td>
+<td class="px-8 py-5 font-headline font-bold text-sm text-stone-900">$450,000</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-yellow-50 text-yellow-700 text-[9px] font-black uppercase rounded-md border border-yellow-100">Pending</span>
+</td>
+<td class="px-8 py-5 text-center">
+<button class="text-stone-300 hover:text-stone-900 transition-colors"><span class="material-symbols-outlined text-xl">more_horiz</span></button>
+</td>
+</tr>
+<tr class="hover:bg-stone-50/50 transition-colors group">
+<td class="px-8 py-5 font-mono text-xs text-stone-500">#SYS-UP88</td>
+<td class="px-8 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-stone-100 flex items-center justify-center text-[10px] font-bold text-stone-500">SA</div>
+<span class="text-sm font-semibold text-stone-900">System Admin</span>
+</div>
+</td>
+<td class="px-8 py-5 text-xs text-stone-500">Service Update</td>
+<td class="px-8 py-5 font-headline font-bold text-sm text-stone-900">—</td>
+<td class="px-8 py-5">
+<span class="px-3 py-1 bg-stone-100 text-stone-500 text-[9px] font-black uppercase rounded-md border border-stone-200">Deployed</span>
+</td>
+<td class="px-8 py-5 text-center">
+<button class="text-stone-300 hover:text-stone-900 transition-colors"><span class="material-symbols-outlined text-xl">more_horiz</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-6 bg-stone-50 border-t border-stone-100 flex justify-between items-center">
+<span class="text-xs text-stone-400 font-medium">Showing 3 of 152 activities</span>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-white border border-stone-200 rounded text-xs font-bold hover:bg-stone-50">Previous</button>
+<button class="px-3 py-1 bg-white border border-stone-200 rounded text-xs font-bold hover:bg-stone-50">Next</button>
+</div>
+</div>
+</section>
+</main>
+</div>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 bg-stone-950 flex flex-col items-center justify-center gap-6 relative">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-white/5"></div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-12">
+<a class="text-stone-500 hover:text-yellow-500 transition-colors font-inter text-[9px] tracking-[0.2em] uppercase font-bold" href="/contact">Privacy Policy</a>
+<a class="text-stone-500 hover:text-yellow-500 transition-colors font-inter text-[9px] tracking-[0.2em] uppercase font-bold" href="/contact">Terms of Service</a>
+<a class="text-stone-500 hover:text-yellow-500 transition-colors font-inter text-[9px] tracking-[0.2em] uppercase font-bold" href="/contact">Security</a>
+<a class="text-stone-500 hover:text-yellow-500 transition-colors font-inter text-[9px] tracking-[0.2em] uppercase font-bold" href="/contact">Compliance</a>
+</div>
+<div class="text-stone-600 text-[9px] tracking-[0.3em] uppercase text-center max-w-3xl opacity-60 leading-relaxed font-medium">
+        © 2024 Maznex Enterprises. All Rights Reserved. Confidential Intelligence Layer. Managed by Global Architect Executive Systems.
+    </div>
+</footer>
+<script>
+    const toggle = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    
+    toggle.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+    });
+
+    // Close sidebar on window resize if it was open on mobile
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+            sidebar.classList.remove('-translate-x-full');
+        } else {
+            sidebar.classList.add('-translate-x-full');
+        }
+    });
+</script>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- GDPR Cookie Banner -->
+<div id="gdpr-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#1A1A1A;border-top:1px solid rgba(201,168,76,0.3);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <p style="color:#d1d1d1;font-size:13px;margin:0;flex:1;min-width:200px;">
+    We use cookies to enhance your experience and analyse site traffic. By continuing, you consent to our 
+    <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <div style="display:flex;gap:10px;">
+    <button onclick="acceptGDPR()" style="background:linear-gradient(135deg,#C9A84C,#A68936);color:#1A1A1A;border:none;padding:8px 20px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;">Accept</button>
+    <button onclick="declineGDPR()" style="background:transparent;color:#888;border:1px solid #444;padding:8px 16px;border-radius:6px;font-size:12px;cursor:pointer;">Decline</button>
+  </div>
+</div>
+<script>
+function acceptGDPR(){localStorage.setItem('gdpr','accepted');document.getElementById('gdpr-banner').style.display='none';}
+function declineGDPR(){localStorage.setItem('gdpr','declined');document.getElementById('gdpr-banner').style.display='none';}
+window.addEventListener('DOMContentLoaded',function(){if(!localStorage.getItem('gdpr'))document.getElementById('gdpr-banner').style.display='flex';});
+</script>
+</body></html>

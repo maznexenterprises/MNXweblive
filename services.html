@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Maznex Enterprises Ltd - Sovereign Authority in Finance &amp; Recruitment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-surface": "#1c1b1b",
+              "on-primary-container": "#503d00",
+              "on-primary-fixed-variant": "#584400",
+              "on-primary": "#ffffff",
+              "surface": "#fcf9f8",
+              "on-tertiary-fixed-variant": "#5c4300",
+              "primary": "#755b00",
+              "error-container": "#ffdad6",
+              "on-secondary-container": "#345083",
+              "error": "#ba1a1a",
+              "inverse-on-surface": "#f3f0ef",
+              "secondary-fixed": "#d7e2ff",
+              "secondary": "#425e91",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#241a00",
+              "on-tertiary-container": "#533c00",
+              "surface-variant": "#e5e2e1",
+              "surface-tint": "#755b00",
+              "surface-container-highest": "#e5e2e1",
+              "on-tertiary-fixed": "#261a00",
+              "inverse-surface": "#313030",
+              "surface-container": "#f0eded",
+              "primary-fixed-dim": "#e6c364",
+              "primary-container": "#c9a84c",
+              "outline": "#7e7665",
+              "tertiary-fixed": "#ffdfa0",
+              "surface-container-low": "#f6f3f2",
+              "on-background": "#1c1b1b",
+              "secondary-container": "#a8c4fe",
+              "on-error-container": "#93000a",
+              "on-surface-variant": "#4d4637",
+              "on-secondary-fixed": "#001a40",
+              "secondary-fixed-dim": "#acc7ff",
+              "surface-container-high": "#eae7e7",
+              "on-error": "#ffffff",
+              "surface-bright": "#fcf9f8",
+              "surface-dim": "#dcd9d9",
+              "primary-fixed": "#ffe08f",
+              "tertiary": "#795900",
+              "background": "#fcf9f8",
+              "on-secondary": "#ffffff",
+              "outline-variant": "#d0c5b2",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#ecc165",
+              "inverse-primary": "#e6c364",
+              "tertiary-container": "#cea64e",
+              "on-secondary-fixed-variant": "#294678"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .clip-path-diagonal {
+            clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+        }
+        .shimmer-btn {
+            background: linear-gradient(90deg, #755b00 0%, #c9a84c 50%, #755b00 100%);
+            background-size: 200% auto;
+            transition: 0.5s;
+        }
+        .shimmer-btn:hover {
+            background-position: right center;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#1A1A1A]/90 backdrop-blur-md border-b border-white/5 shadow-2xl transition-all duration-300">
+<div class="flex justify-between items-center px-4 md:px-8 py-3 max-w-full">
+<div class="flex items-center gap-3">
+<a href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 60" width="60" height="45"><rect width="80" height="60" rx="4" fill="#1A1A1A"/><text x="40" y="44" text-anchor="middle" font-family="Arial Black" font-size="38" font-weight="900" fill="#C9A84C">MX</text></svg></a>
+<a href="/" class="text-xl md:text-2xl font-black text-primary tracking-tighter uppercase font-headline hidden sm:block" style="color:#C9A84C;text-decoration:none;">Maznex</a>
+</div>
+<div class="hidden lg:flex space-x-6 items-center">
+<a class="font-bold tracking-tight uppercase text-xs hover:text-yellow-400 transition-colors" style="color:#C9A84C;" href="/">Home</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/services">Services</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/recruitment">Recruitment</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/packages">Packages</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/insights">Insights</a>
+<a class="font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" href="/contact">Contact</a>
+</div>
+<div class="flex items-center space-x-3 md:space-x-6">
+<a href="/login" class="hidden md:block font-bold tracking-tight uppercase text-xs text-white/80 hover:text-yellow-400 transition-colors" style="text-decoration:none;">Client Login</a>
+<a href="/contact" class="bg-yellow-500 hover:bg-yellow-600 text-black px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold tracking-tight uppercase text-[10px] md:text-xs transition-all duration-300 active:scale-95" style="background:#C9A84C;color:#1A1A1A;text-decoration:none;">Book a Free Call</a>
+</div>
+<!-- Mobile menu button -->
+<button class="lg:hidden text-white/80 hover:text-yellow-400 ml-3" onclick="toggleMobileMenu()" style="background:none;border:none;cursor:pointer;">
+  <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" style="display:none;" class="lg:hidden border-t border-white/10 px-4 py-4 space-y-3 bg-[#1A1A1A]">
+<a href="/" class="block text-sm font-bold uppercase text-yellow-400 py-2">Home</a>
+<a href="/services" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Services</a>
+<a href="/recruitment" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Recruitment</a>
+<a href="/packages" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Packages</a>
+<a href="/insights" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Insights</a>
+<a href="/contact" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Contact</a>
+<a href="/login" class="block text-sm font-bold uppercase text-white/80 hover:text-yellow-400 py-2">Client Login</a>
+</div>
+</nav>
+<script>function toggleMobileMenu(){var m=document.getElementById('mobile-menu');m.style.display=m.style.display==='none'?'block':'none';}</script>
+<!-- Global Concierge -->
+<aside class="fixed bottom-8 right-8 z-50 flex flex-col space-y-4 items-end">
+<div class="bg-green-500 text-white rounded-full p-4 shadow-xl hover:scale-110 transition-transform cursor-pointer active:scale-90 flex items-center justify-center">
+<span class="material-symbols-outlined">chat</span>
+</div>
+<div class="bg-green-500 text-white rounded-full p-4 shadow-xl hover:scale-110 transition-transform cursor-pointer active:scale-90 flex items-center justify-center">
+<span class="material-symbols-outlined">request_quote</span>
+</div>
+<div class="bg-green-600 text-white rounded-full p-4 shadow-xl animate-pulse hover:scale-110 transition-transform cursor-pointer active:scale-90 flex items-center justify-center">
+<span class="material-symbols-outlined">phone_in_talk</span>
+</div>
+</aside>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden bg-neutral-900">
+<div class="absolute inset-0 opacity-30">
+<img alt="Modern architectural glass building" class="w-full h-full object-cover" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+<div class="relative z-10 text-center px-4 max-w-4xl">
+<h1 class="font-headline text-4xl md:text-7xl font-extrabold text-white mb-6 tracking-tighter uppercase">
+                Sovereign Financial <br/><span class="text-primary-container">Architecture</span>
+</h1>
+<p class="font-body text-lg md:text-xl text-white/80 mb-8 leading-relaxed max-w-2xl mx-auto">
+                Maznex Enterprises Ltd delivers unparalleled global financial intelligence and elite human capital solutions for the world's most demanding institutions.
+            </p>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-16 bg-surface" style="clip-path: polygon(0 100%, 100% 100%, 100% 0);"></div>
+</section>
+<!-- Top Brochure Banner -->
+<section class="px-4 md:px-8 -mt-8 relative z-20">
+<div class="max-w-7xl mx-auto bg-primary p-0.5 rounded-lg shadow-2xl">
+<div class="bg-neutral-900 px-6 md:px-10 py-6 flex flex-col md:flex-row justify-between items-center rounded-lg">
+<div class="mb-6 md:mb-0 text-center md:text-left">
+<h3 class="font-headline text-xl font-bold text-white uppercase tracking-wider mb-1">2024 Global Capability Statement</h3>
+<p class="text-neutral-400 text-sm">Comprehensive guide to our international audit and advisory frameworks.</p>
+</div>
+<button class="shimmer-btn px-8 py-3.5 rounded font-manrope font-extrabold text-on-primary flex items-center space-x-2 uppercase text-xs tracking-[0.2em]">
+<span>Download Brochure</span>
+<span class="material-symbols-outlined text-sm">download</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- 1. External Audit -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl overflow-hidden group border border-outline-variant/10 shadow-sm hover:shadow-xl transition-all duration-500">
+<div class="flex flex-col lg:flex-row h-full">
+<div class="lg:w-1/2 relative overflow-hidden min-h-[300px]">
+<img alt="External Audit" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+<div class="lg:w-1/2 p-8 md:p-10 flex flex-col justify-between">
+<div>
+<span class="inline-block bg-primary/10 text-primary font-bold text-[10px] uppercase tracking-[0.2em] px-3 py-1 mb-4 rounded border border-primary/20">Sovereign Compliance</span>
+<h2 class="font-headline text-3xl font-extrabold mb-4 text-on-surface">External Audit</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Rigorous, independent examination of global financial records ensuring uncompromising accuracy and international regulatory alignment.</p>
+<div class="flex items-center space-x-2 mb-8">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="text-[10px] font-bold text-secondary uppercase tracking-tighter">Recommended for Publicly Traded Firms</span>
+</div>
+</div>
+<button class="shimmer-btn w-full py-4 text-white font-black uppercase text-xs tracking-[0.2em] rounded">Get a Quote</button>
+</div>
+</div>
+</div>
+<!-- 2. Internal Audit -->
+<div class="md:col-span-4 bg-white p-8 md:p-10 rounded-xl border-t-4 border-primary shadow-lg flex flex-col justify-between hover:-translate-y-2 transition-transform duration-300">
+<div>
+<span class="material-symbols-outlined text-primary text-5xl mb-6">security</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Internal Audit</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Optimizing internal controls and risk management frameworks for multi-jurisdictional enterprises.</p>
+<span class="inline-block text-[10px] font-bold text-primary bg-primary/5 px-3 py-1 rounded uppercase tracking-widest border border-primary/10 mb-6">FinTech Optimized</span>
+</div>
+<button class="w-full border-2 border-primary/20 text-primary py-3.5 font-bold uppercase text-xs tracking-widest hover:bg-primary hover:text-white transition-all">Get a Quote</button>
+</div>
+<!-- 3. Taxation -->
+<div class="md:col-span-4 bg-neutral-900 text-white p-8 md:p-10 rounded-xl relative overflow-hidden group flex flex-col justify-between border border-white/5">
+<div class="absolute -top-10 -right-10 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]">account_balance</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold mb-4">Taxation</h3>
+<p class="text-white/70 text-sm leading-relaxed mb-8">Strategic cross-border tax planning and compliance for complex corporate structures and portfolios.</p>
+<div class="mb-8">
+<div class="text-[10px] text-primary font-bold uppercase mb-4 tracking-widest">Core Capabilities</div>
+<ul class="text-xs space-y-3 text-white/50 font-medium">
+<li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> <span>International VAT &amp; GST</span></li>
+<li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> <span>Transfer Pricing Strategy</span></li>
+<li class="flex items-center space-x-2"><span class="w-1.5 h-1.5 rounded-full bg-primary"></span> <span>M&amp;A Tax Due Diligence</span></li>
+</ul>
+</div>
+</div>
+<button class="shimmer-btn w-full py-4 text-white font-black uppercase text-xs tracking-[0.2em] rounded">Get a Quote</button>
+</div>
+<!-- 4. Financial Advisory -->
+<div class="md:col-span-8 bg-surface-container-low rounded-xl p-8 md:p-12 flex flex-col md:flex-row gap-10 border border-outline-variant/10 shadow-sm">
+<div class="md:w-3/5 flex flex-col justify-between">
+<div>
+<h2 class="font-headline text-3xl font-extrabold mb-4 text-on-surface">Financial Advisory</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-8">Expert capital restructuring and investment strategies designed to safeguard and multiply global wealth for private equity and institutional investors.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+<div class="flex items-center space-x-3 bg-white p-4 rounded border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Growth Strategy</span>
+</div>
+<div class="flex items-center space-x-3 bg-white p-4 rounded border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary">handshake</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">M&amp;A Support</span>
+</div>
+</div>
+</div>
+<button class="shimmer-btn w-full sm:w-max px-12 py-4 text-white font-black uppercase text-xs tracking-[0.2em] rounded">Get a Quote</button>
+</div>
+<div class="md:w-2/5 bg-white rounded-lg p-8 flex flex-col justify-center items-center text-center shadow-sm border border-outline-variant/5">
+<span class="material-symbols-outlined text-primary text-6xl mb-4">stars</span>
+<span class="text-[10px] font-black text-primary uppercase mb-2 tracking-[0.3em]">Elite Status</span>
+<p class="text-xs font-semibold text-on-surface-variant leading-relaxed">Highly recommended for <br/>Private Equity Groups</p>
+</div>
+</div>
+<!-- 5-8 Small Grid Services -->
+<div class="md:col-span-3 bg-white p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-10 h-1 border-b-2 border-primary mb-6 group-hover:w-full transition-all duration-500"></div>
+<h4 class="font-headline font-bold text-lg mb-2">Bookkeeping</h4>
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Digital-first ledger management for transparent real-time financial reporting.</p>
+<button class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center group/btn">
+                    Get a Quote <span class="material-symbols-outlined text-sm ml-1 group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-3 bg-white p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-10 h-1 border-b-2 border-primary mb-6 group-hover:w-full transition-all duration-500"></div>
+<h4 class="font-headline font-bold text-lg mb-2">Management Accounts</h4>
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Insightful monthly reporting to drive precise executive decision-making.</p>
+<button class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center group/btn">
+                    Get a Quote <span class="material-symbols-outlined text-sm ml-1 group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-3 bg-white p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-10 h-1 border-b-2 border-primary mb-6 group-hover:w-full transition-all duration-500"></div>
+<h4 class="font-headline font-bold text-lg mb-2">Payroll</h4>
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed">Global payroll processing with full localized tax and regulatory compliance.</p>
+<button class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center group/btn">
+                    Get a Quote <span class="material-symbols-outlined text-sm ml-1 group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="md:col-span-3 bg-white p-6 rounded-xl border border-outline-variant/10 shadow-sm hover:shadow-md transition-shadow group">
+<div class="w-10 h-1 border-b-2 border-primary mb-6 group-hover:w-full transition-all duration-500"></div>
+<h4 class="font-headline font-bold text-lg mb-2">Statutory Accounts</h4>
+<p class="text-xs text-on-surface-variant mb-6 leading-relaxed">End-of-year filings prepared for global tax authorities with total precision.</p>
+<button class="text-primary font-bold text-[10px] uppercase tracking-widest flex items-center group/btn">
+                    Get a Quote <span class="material-symbols-outlined text-sm ml-1 group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- 9. Outsourced Finance -->
+<div class="md:col-span-6 bg-neutral-900 rounded-2xl overflow-hidden text-white relative group h-[400px]">
+<div class="absolute inset-0 opacity-40">
+<img alt="Outsourced Finance" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><circle cx="50" cy="50" r="50" fill="%23262626"/><circle cx="50" cy="38" r="18" fill="%23C9A84C"/><ellipse cx="50" cy="85" rx="30" ry="22" fill="%23C9A84C"/></svg>"/>
+</div>
+<div class="relative z-10 p-10 md:p-12 bg-gradient-to-t from-neutral-900 via-neutral-900/40 to-transparent h-full flex flex-col justify-end">
+<h3 class="font-headline text-3xl font-bold mb-4">Outsourced Finance</h3>
+<p class="text-neutral-300 mb-8 max-w-sm text-sm leading-relaxed">Integrate a premier finance department into your business without the overhead of internal scaling.</p>
+<button class="shimmer-btn py-4 px-10 text-white font-black uppercase text-xs tracking-[0.2em] rounded self-start">Get a Quote</button>
+</div>
+</div>
+<!-- 10. Global Recruitment -->
+<div class="md:col-span-6 bg-white rounded-2xl p-10 md:p-12 border border-outline-variant/10 flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-8">
+<span class="material-symbols-outlined text-primary text-6xl">public</span>
+<div class="text-right">
+<span class="block text-[10px] font-black text-primary uppercase tracking-[0.3em]">Talent Access</span>
+<span class="text-xs font-bold text-on-surface-variant">Global Network</span>
+</div>
+</div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface mb-4">Global Recruitment</h3>
+<p class="text-on-surface-variant text-base leading-relaxed mb-8">Sourcing elite financial talent across six continents for industry leaders and rising unicorns. We find the architects of your future.</p>
+</div>
+<div class="flex flex-wrap gap-3 mb-10">
+<span class="bg-primary/5 text-primary text-[10px] font-bold px-4 py-2 rounded border border-primary/10 uppercase tracking-widest">Executive Search</span>
+<span class="bg-primary/5 text-primary text-[10px] font-bold px-4 py-2 rounded border border-primary/10 uppercase tracking-widest">Interim CFOs</span>
+<span class="bg-primary/5 text-primary text-[10px] font-bold px-4 py-2 rounded border border-primary/10 uppercase tracking-widest">Specialist Audit</span>
+</div>
+<button class="shimmer-btn py-4 text-white font-black uppercase text-xs tracking-[0.2em] rounded">Inquire for Talent</button>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-7xl mx-auto px-4 md:px-8 mb-24">
+<div class="bg-neutral-900 rounded-3xl p-12 md:p-20 relative overflow-hidden text-center border border-white/5">
+<div class="absolute top-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-3xl md:text-5xl font-extrabold text-white mb-6 uppercase tracking-tight">Ready to Secure Your <span class="text-primary">Financial Legacy?</span></h2>
+<p class="text-white/60 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">Download our full service portfolio or speak directly with a senior partner to discuss your global requirements.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+<button class="shimmer-btn w-full sm:w-auto px-12 py-5 rounded font-manrope font-extrabold text-on-primary uppercase text-xs tracking-[0.2em]">
+                        Download Brochure
+                    </button>
+<button class="w-full sm:w-auto px-12 py-5 rounded font-manrope font-extrabold text-white border-2 border-white/20 hover:bg-white hover:text-neutral-900 transition-all uppercase text-xs tracking-[0.2em]">
+                        Schedule Consultation
+                    </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-950 text-white w-full relative overflow-hidden pt-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-6 md:px-8 mb-20">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<div>
+<img alt="Maznex Logo" class="h-16 w-auto object-contain mb-8" src="data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100"><rect width="100" height="100" fill="%231A1A1A"/><text x="50" y="68" text-anchor="middle" font-family="Arial Black" font-size="52" font-weight="900" fill="%23C9A84C">MX</text></svg>"/>
+<p class="font-manrope text-sm leading-relaxed text-neutral-400 mb-8 max-w-xs">
+                    Providing sovereign financial authority and elite recruitment solutions to global institutions since 2012. Headquarters in London.
+                </p>
+<div class="flex space-x-5">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-white transition-colors p-2 bg-white/5 rounded">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-white transition-colors p-2 bg-white/5 rounded">business_center</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:text-white transition-colors p-2 bg-white/5 rounded">mail</span>
+</div>
+</div>
+<div>
+<h4 class="text-white font-bold mb-8 uppercase text-xs tracking-[0.25em] border-l-2 border-primary pl-4">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-primary transition-colors" href="/services">Audit &amp; Assurance</a></li>
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-primary transition-colors" href="/services">Tax Advisory</a></li>
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-primary transition-colors" href="/services">Corporate Finance</a></li>
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-primary transition-colors" href="/recruitment">Global Recruitment</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-8 uppercase text-xs tracking-[0.25em] border-l-2 border-primary pl-4">Offices</h4>
+<ul class="space-y-4">
+<li class="group">
+<a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors flex flex-col" href="/services">
+<span class="text-white font-semibold">London, UK (HQ)</span>
+<span class="text-xs text-neutral-500 group-hover:text-primary transition-colors">One Canada Square, Canary Wharf</span>
+</a>
+</li>
+<li class="group">
+<a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors flex flex-col" href="/services">
+<span class="text-white font-semibold">Dubai, UAE</span>
+<span class="text-xs text-neutral-500 group-hover:text-primary transition-colors">DIFC, Gate Precinct</span>
+</a>
+</li>
+<li class="group">
+<a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors flex flex-col" href="/services">
+<span class="text-white font-semibold">Singapore</span>
+<span class="text-xs text-neutral-500 group-hover:text-primary transition-colors">Marina Bay Financial Centre</span>
+</a>
+</li>
+</ul>
+</div>
+<div>
+<h4 class="text-white font-bold mb-8 uppercase text-xs tracking-[0.25em] border-l-2 border-primary pl-4">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors" href="/contact">Terms of Service</a></li>
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors" href="/contact">Privacy Policy</a></li>
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors" href="/contact">Regulatory Status</a></li>
+<li><a class="text-neutral-400 font-manrope text-sm hover:text-white transition-colors" href="/login">Client Portal</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-6 md:px-8 py-10 border-t border-white/5 bg-black/30">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-6">
+<p class="font-manrope text-[10px] text-neutral-500 uppercase tracking-widest">© 2024 Maznex Enterprises Ltd. Sovereign Authority in Finance &amp; Recruitment. Registered in England &amp; Wales.</p>
+<div class="flex space-x-8">
+<span class="text-primary font-bold text-[10px] uppercase tracking-[0.2em]">Security Certified</span>
+<span class="text-primary font-bold text-[10px] uppercase tracking-[0.2em]">Global Compliant</span>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/447424748791?text=Hello%20Maznex%2C%20I%20would%20like%20to%20enquire%20about%20your%20services" 
+   target="_blank" rel="noopener"
+   style="position:fixed;bottom:24px;left:24px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.4);transition:transform 0.2s;"
+   onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- GDPR Cookie Banner -->
+<div id="gdpr-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:10000;background:#1A1A1A;border-top:1px solid rgba(201,168,76,0.3);padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+  <p style="color:#d1d1d1;font-size:13px;margin:0;flex:1;min-width:200px;">
+    We use cookies to enhance your experience and analyse site traffic. By continuing, you consent to our 
+    <a href="/contact" style="color:#C9A84C;text-decoration:underline;">Privacy Policy</a>.
+  </p>
+  <div style="display:flex;gap:10px;">
+    <button onclick="acceptGDPR()" style="background:linear-gradient(135deg,#C9A84C,#A68936);color:#1A1A1A;border:none;padding:8px 20px;border-radius:6px;font-weight:700;font-size:12px;cursor:pointer;text-transform:uppercase;letter-spacing:0.05em;">Accept</button>
+    <button onclick="declineGDPR()" style="background:transparent;color:#888;border:1px solid #444;padding:8px 16px;border-radius:6px;font-size:12px;cursor:pointer;">Decline</button>
+  </div>
+</div>
+<script>
+function acceptGDPR(){localStorage.setItem('gdpr','accepted');document.getElementById('gdpr-banner').style.display='none';}
+function declineGDPR(){localStorage.setItem('gdpr','declined');document.getElementById('gdpr-banner').style.display='none';}
+window.addEventListener('DOMContentLoaded',function(){if(!localStorage.getItem('gdpr'))document.getElementById('gdpr-banner').style.display='flex';});
+</script>
+<script src="/entry-popup.js"></script>
+</body></html>
