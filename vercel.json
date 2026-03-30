@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/",                      "dest": "/index.html" },
+    { "src": "/services",              "dest": "/services.html" },
+    { "src": "/recruitment",           "dest": "/recruitment.html" },
+    { "src": "/packages",              "dest": "/packages.html" },
+    { "src": "/recruitment-packages",  "dest": "/recruitment-packages.html" },
+    { "src": "/contact",               "dest": "/contact.html" },
+    { "src": "/insights",              "dest": "/insights.html" },
+    { "src": "/jobs",                  "dest": "/jobs.html" },
+    { "src": "/login",                 "dest": "/login.html" },
+    { "src": "/admin",                 "dest": "/admin.html" },
+    { "src": "/candidate-portal",      "dest": "/candidate-portal.html" },
+    { "src": "/employer-dashboard",    "dest": "/employer-dashboard.html" },
+    { "src": "/checkout-success",      "dest": "/checkout-success.html" },
+    { "src": "/(.*)",                  "dest": "/404.html", "status": 404 }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options",        "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection",       "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
